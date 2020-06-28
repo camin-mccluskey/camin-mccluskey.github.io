@@ -1,4 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Default branch is `dev`, built project is deployed to `master` and is deployed to https://camin-mccluskey.github.io
 
 ## Available Scripts
 
@@ -26,6 +27,10 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run deploy`
+
+Builds and deploys the app to the `master` branch, pushing it to [my personal site](http://camin-mccluskey.github.io)
 
 ### `npm run eject`
 
