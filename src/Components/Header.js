@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Typical from 'react-typical'
+const ReactMarkdown = require('react-markdown')
 
 const titleSteps = [
   "I'm Camin.", 1000, 
   "I'm a developer.", 1000, 
-  "I'm a reader.", 1000, 
   "I'm a traveller.", 1000,
   "I'm Camin.", 1000,
 ]
@@ -49,7 +49,10 @@ class Header extends Component {
               loop={1}
               wrapper="h1"
             />
-            <h3>I'm a {city} based <span>{occupation}</span>. {description}.</h3>
+            <h3>
+              I'm a {city} based <span>{occupation}</span>.
+              <ReactMarkdown source={description}/>
+            </h3>
             <hr />
             <ul className="social">
                {networks}
