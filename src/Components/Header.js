@@ -3,7 +3,7 @@ import Typical from 'react-typical'
 const ReactMarkdown = require('react-markdown')
 
 const titleSteps = [
-  "I'm Camin.", 1000, 
+  "Hey!", 500,
   "I'm a developer.", 1000, 
   "I'm a traveller.", 1000,
   "I'm Camin.", 1000,
@@ -34,7 +34,7 @@ class Header extends Component {
             <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
             <li><a className="smoothscroll" href="#about">About</a></li>
 	         <li><a className="smoothscroll" href="#resume">Resume</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Works</a></li>
+            {/* <li><a className="smoothscroll" href="#portfolio">Works</a></li> */}
             {/* <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li> */}
             <li><a className="smoothscroll" href="#contact">Contact</a></li>
          </ul>
