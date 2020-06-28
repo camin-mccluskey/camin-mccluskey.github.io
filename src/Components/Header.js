@@ -1,4 +1,13 @@
 import React, { Component } from 'react';
+import Typical from 'react-typical'
+
+const titleSteps = [
+  "I'm Camin.", 1000, 
+  "I'm a developer.", 1000, 
+  "I'm a reader.", 1000, 
+  "I'm a traveller.", 1000,
+  "I'm Camin.", 1000,
+]
 
 class Header extends Component {
   render() {
@@ -9,7 +18,7 @@ class Header extends Component {
       var description= this.props.data.description;
       var city= this.props.data.address.city;
       var networks= this.props.data.social.map(function(network){
-        return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
+        return <li key={network.name}><a href={network.url}><i class={network.className}></i></a></li>
       })
     }
 
@@ -26,7 +35,7 @@ class Header extends Component {
             <li><a className="smoothscroll" href="#about">About</a></li>
 	         <li><a className="smoothscroll" href="#resume">Resume</a></li>
             <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-            <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
+            {/* <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li> */}
             <li><a className="smoothscroll" href="#contact">Contact</a></li>
          </ul>
 
@@ -34,7 +43,12 @@ class Header extends Component {
 
       <div className="row banner">
          <div className="banner-text">
-            <h1 className="responsive-headline">I'm {name}.</h1>
+            <Typical
+              className={'responsive-headline'}
+              steps={titleSteps}
+              loop={1}
+              wrapper="h1"
+            />
             <h3>I'm a {city} based <span>{occupation}</span>. {description}.</h3>
             <hr />
             <ul className="social">
