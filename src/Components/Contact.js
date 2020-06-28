@@ -36,8 +36,7 @@ class Contact extends Component {
       body: JSON.stringify({ values: data }),
       headers: { 'Pizzly-Auth-Id': '822620f0-b95f-11ea-ae44-0585064b5bfd' }
     })
-    .then(this.setState({sent: true}))
-    .catch(this.setState({error: true}));
+    .then(this.setState({sent: true}));
   }
 
 
@@ -118,7 +117,6 @@ class Contact extends Component {
                         Submit
                     </button>
                     {this.state.sent && <p>Thanks!</p>}
-                    {this.state.error && <p>Error, please try again</p>}
                   </div>
 					</fieldset>
 				   </form>
