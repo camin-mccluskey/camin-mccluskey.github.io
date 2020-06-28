@@ -26,7 +26,7 @@ class Contact extends Component {
          </div>
          <div className="row">
             <div className="seven columns">
-               <form action="https://script.google.com/macros/s/AKfycby72hykuHuiyXKmpO3L4CdfvabGjAxJwKyg6Q6GosKhQwRagkuZ/exec" method="POST" id="contactForm" name="contactForm" class="gform">
+               <form action="" method="POST" id="contactForm" name="contactForm">
 					      <fieldset> 
                   <div>
 						        <label htmlFor="contactName">Name <span className="required">*</span></label>
