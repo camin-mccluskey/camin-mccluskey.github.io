@@ -1,0 +1,151 @@
+{
+  "main": {
+    "name":"Camin McCluskey",
+    "occupation":"Software Engineer",
+    "description":"Currently working at [Skyscanner](https://skyscanner.net) and co-founder at [inHouse](https://inhouseapp.io)",
+    "image":"profilepic.jpg",
+    "bio":"Graduated with First Class Honours in Management from the London School of Economics including a full scholarship year abroad at the University of California, Berkeley to study Computer Science and Machine Learning. Interested in Start-ups, Venture Capital, and Consulting within in the technology sector. I have a particular interest in SaaS businesses leveraging Artificial Intelligence insights.",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "mccluskey.camin@gmail.com",
+    "phone": "07423619442",
+    "address":{
+      "street":"(Your Street)",
+      "city":"London",
+      "state":"(Your State)",
+      "zip": "(Your Zip/Postal Code)"
+    },
+    "website": "https://camin-mccluskey.github.io",
+    "resumedownload":"https://camin-mccluskey.github.io",
+    "social":[
+      {
+        "name":"twitter",
+        "url":"https://twitter.com/Camin_McCluskey",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"medium",
+        "url": "https://medium.com",
+        "className": "fa fa-medium"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/camin-mccluskey-06a003116/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"http://github.com/camin-mccluskey",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"This is the technology stack I use most commonly.",
+    "education":[
+      {
+        "school":"London School of Economics and Political Science",
+        "degree":"BSc Hons. Management",
+        "graduated":"June 2019",
+        "description":""
+      },
+      {
+        "school":"University of California, Berkeley",
+        "degree":"Computer Science",
+        "graduated":"May 2018",
+        "description":""
+      },
+      {
+        "school":"Oxford University",
+        "degree":"Engineering, Economics and Managment",
+        "graduated":"May 2014",
+        "description":""
+      }
+    ],
+    "work":[
+      {
+        "company":"Skyscanner",
+        "title":"Software Engineer",
+        "years":"May 2019 - Present",
+        "description":"Building Identity infrastructure"
+      },
+      {
+        "company":"Amazon",
+        "title":"Supply Chain Excecution Intern",
+        "years":"March 2007 - February 2010",
+        "description":""
+      }
+    ],
+    "skills":[
+      {
+        "name":"Python",
+        "level":"90%"
+      },
+      {
+        "name":"Java",
+        "level":"75%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"60%"
+      },
+      {
+        "name":"React Native",
+        "level":"85%"
+      },
+      {
+        "name":"AWS Technologies",
+        "level":"80%"
+      },
+      {
+        "name":"Git",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"inHouse",
+        "category":"An app for housemates to make shared living easy.",
+        "image":"canadian-wanderlust.jpg",
+        "url":"https://www.canadianwanderlust.com"
+      },
+      {
+        "title":"Fury Fighting Gear",
+        "category":"(offline now) A fighting gear company I started",
+        "image":"fury-fighting-gear.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Original Thai Food",
+        "category":"Website I built for a restaurant I like in Thailand",
+        "image":"original-thai-food.jpg",
+        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title":"Resume Website",
+        "category":"A React based resume website template",
+        "image":"resume-website.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Smirkspace",
+        "category":"(MVP Only) A React and Meteor based chat University project.",
+        "image":"smirkspace.jpg",
+        "url":"http://www.smirkspace.com"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"",
+        "user":""
+      },
+      {
+        "text":"",
+        "user":""
+      }
+    ]
+  }
+}
