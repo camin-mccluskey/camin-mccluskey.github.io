@@ -22,7 +22,9 @@ class Contact extends Component {
   }
 
   submitForm = (e) => {
+    // prevent page load
     e.preventDefault();
+    {/* https://community.bearer.sh/pushtogsheet/*/}
     const baseUrl = "https://pushtogsheet.herokuapp.com";
     const query = `valueInputOption=RAW&pizzly_pkey=pope8Qy8qfYyppnHRMgLMpQ8MuEUKDGeyhfGCj`;
     const url = new URL(`/proxy/google-sheets/spreadsheets/${spreadsheetId}/values/A1:append?${query}`, baseUrl);
@@ -64,7 +66,6 @@ class Contact extends Component {
          </div>
          <div className="row">
             <div className="seven columns">
-              {/* https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server */}
                <form>
 					      <fieldset> 
                   <div>
