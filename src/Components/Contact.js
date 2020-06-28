@@ -29,7 +29,7 @@ class Contact extends Component {
     const query = `valueInputOption=RAW&pizzly_pkey=pope8Qy8qfYyppnHRMgLMpQ8MuEUKDGeyhfGCj`;
     const url = new URL(`/proxy/google-sheets/spreadsheets/${spreadsheetId}/values/A1:append?${query}`, baseUrl);
     const { name, email, subject, message} = this.state;
-    const data = [["name", "email", "subject", "message"], [name, email, subject, message]];
+    const data = [[name, email, subject, message]];
 
     fetch(url.href, {
       method: "POST",
