@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
+import {  BrowserRouter as Router } from 'react-router-dom';
 import $ from 'jquery';
 import './App.css';
 import Header from './Components/Header';
@@ -44,14 +45,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Header data={this.state.resumeData.main}/>
-        <About data={this.state.resumeData.main}/>
-        <Resume data={this.state.resumeData.resume}/>
-        <Thoughts/>
-        <Contact data={this.state.resumeData.main}/>
-        <Footer data={this.state.resumeData.main}/>
-      </div>
+      <Router>
+        <div className="App">
+          <Header data={this.state.resumeData.main}/>
+          <About data={this.state.resumeData.main}/>
+          <Resume data={this.state.resumeData.resume}/>
+          <Thoughts/>
+          <Contact data={this.state.resumeData.main}/>
+          <Footer data={this.state.resumeData.main}/>
+        </div>
+      </Router>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import MediumProfile from "react-medium-profile";
 
 
@@ -28,9 +29,9 @@ class Thoughts extends Component {
                 alignItems: "center",  
               }}>
             <p style={{fontSize: 50, paddingTop: 15}}>
-              <a href="https://camin.mccluskey.github.io/ReadingList">
+              <Link to="/ReadingList">
                 <span role="img" aria-label="books">📚</span>
-              </a>
+              </Link>
             </p>
             </div>
           </div>
