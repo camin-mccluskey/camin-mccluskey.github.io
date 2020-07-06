@@ -28,6 +28,7 @@ class Resume extends Component {
         <div className="row work">
           <div className="three columns header-col">
             <h1><span>Work</span></h1>
+            <ReactMarkdown source="A more comphrensive breakdown of my previous experience is availalbe on [LinkedIn](https://www.linkedin.com/in/camin-mccluskey-06a003116/)" />
           </div>
           <div className="nine columns main-col">
             {work}
@@ -46,8 +47,8 @@ class Resume extends Component {
         </div>
       </div>
 
-      <div className="row skill">
-         <div className="three columns header-col">
+      {/* <div className="row skill"> */}
+         {/* <div className="three columns header-col">
             <h1><span>Skills</span></h1>
          </div>
         <div className="nine columns main-col">
@@ -58,7 +59,7 @@ class Resume extends Component {
 					  </ul>
 				  </div>
 			  </div>
-      </div>
+      </div> */}
    </section>
     );
   }
