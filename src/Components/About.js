@@ -22,6 +22,7 @@ class About extends Component {
             <h2>About Me</h2>
             <ReactMarkdown source={bioHeadline}/>
             <ReactMarkdown source={bioBody}/>
+            <ReactMarkdown source="If you're a current or future collegue, or you'd like to know more about me and my professional interests you can checkout my [Personal User Manual](https://camin-mccluskey.github.io/Personal-User-Manual)" />
             <div className="row">
                <div className="columns contact-details">
                   <h2>Contact Details</h2>
