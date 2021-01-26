@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Typical from 'react-typical'
-const ReactMarkdown = require('react-markdown')
+import Typical from 'react-typical';
+const ReactMarkdown = require('react-markdown');
 
 const titleSteps = [
   "Hey!", 500,

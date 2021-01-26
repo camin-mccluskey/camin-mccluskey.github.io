@@ -6,8 +6,8 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import About from './Components/About';
 import Resume from './Components/Resume';
-import Contact from './Components/Contact';
 import Thoughts from './Components/Thoughts';
+import { PopupWidget } from "react-calendly";
 
 
 class App extends Component {
@@ -50,7 +50,11 @@ class App extends Component {
         <Resume data={this.state.resumeData.resume}/>
         <Thoughts/>
         <Footer data={this.state.resumeData.main}/>
-        <a href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+        <PopupWidget 
+          text="Let's Chat"
+          url='https://calendly.com/camin-mccluskey/15min' 
+          color='#F06000'
+        />
       </div>
     );
   }
