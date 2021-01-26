@@ -15,27 +15,11 @@ class About extends Component {
     return (
       <section id="about">
       <div className="row">
-         {/* <div className="two columns">
-            <img className="profile-pic"  src={profilepic} alt="Camin McCluskey Profile Pic" />
-         </div> */}
          <div className="nine columns main-col">
             <h2>About Me</h2>
             <ReactMarkdown source={bioHeadline}/>
             <ReactMarkdown source={bioBody}/>
             <ReactMarkdown source="If you're a current or future collegue, or you'd like to know more about me and my professional interests you can checkout my [Personal User Manual](https://camin-mccluskey.github.io/personal-user-manual)" />
-            <div className="row">
-               <div className="columns contact-details">
-                  <h2>Contact Details</h2>
-						      <span>Phone: {phone}</span>
-                  <br />
-                 <span>Email: {email}</span>
-               </div>
-               {/* <div className="columns download">
-                  <p>
-                     <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>
-                  </p>
-               </div> */}
-            </div>
          </div>
       </div>
 
