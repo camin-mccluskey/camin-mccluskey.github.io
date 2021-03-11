@@ -52,7 +52,7 @@ class App extends Component {
         <Footer data={this.state.resumeData.main}/>
         <PopupWidget 
           text="Let's Chat"
-          url='https://calendly.com/camin-mccluskey/15min' 
+          url='https://calendly.com/camin-mccluskey/30min' 
           color='#F06000'
         />
       </div>
