@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Default branch is `dev`, built project is deployed to `master` and is deployed to https://camin-mccluskey.github.io
+Default branch is `dev`, built project is deployed to `master` and is deployed to https://camin.xyz
 
 ## Available Scripts
 
