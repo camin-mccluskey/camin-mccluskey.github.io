@@ -28,7 +28,7 @@ class Thoughts extends Component {
                 alignItems: "center",  
               }}>
             <p style={{fontSize: 50, paddingTop: 15}}>
-              <a onClick={() => window.location.href="https://camin-mccluskey.github.io/ReadingList"}>
+              <a onClick={() => window.location.href="https://camin-mccluskey.github.io/reading-list"}>
                 <span role="img" aria-label="books">📚</span>
               </a>
             </p>
