@@ -1,11 +1,26 @@
-import './App.scss';
+import { useState, useEffect } from 'react';
+import useDarkMode from './utils/useDarkMode';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faMedium, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import useDarkMode from './utils/useDarkMode';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'
+import EXAMPLE from './posts/example.md';
+import './App.scss';
 
 
 function App() {
   const [darkMode, setDarkMode] = useDarkMode(false);
+  const [content, setContent] = useState({md: ""});
+
+  useEffect(()=> {
+    fetch(EXAMPLE)
+      .then((res) => res.text())
+      .then((md) => {
+        console.log(md);
+        setContent({ md })
+      })
+  }, [])
+
   return (
     <div className="dark:bg-black bg-white w-screen h-screen darkTrans">
       <div className="flex flex-col justify-center w-full">
@@ -49,8 +64,12 @@ function App() {
         </div>
 
         {/* Content */}
-        <div>
-          <p>Hello World</p>
+        <div className="w-4/5 justify-center mx-auto pt-10">
+          <ReactMarkdown 
+            remarkPlugins={[[remarkGfm]]}
+            className="prose w-full max-w-full"
+            children={content.md}
+          />
         </div>
       </div>
     </div>
