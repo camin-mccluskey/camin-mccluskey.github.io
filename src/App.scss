@@ -9,7 +9,7 @@
   height: var(--size);
   box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
   border-radius: 999px;
-  color: hsl(240, 100%, 95%);
+  color: hsl(240, 21%, 86%);
   
   transition: all 500ms;
   
@@ -32,34 +32,4 @@
       var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size),
     ;
   }
-}
-
-// layout
-// body {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   min-height: 100vh;
-// }
-
-.background {
-  --bg: hsl(240, 100%, 10%);
-  background: var(--bg);
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  transition: background 500ms;
-}
-
-.toggle {
-  z-index: 1;
-  // &:checked {
-  //   & ~ .background {
-  //     --bg: white;
-  //   }
-  //   & ~ .title {
-  //     --color: hsl(40, 100%, 50%);
-  //   }
-  // }
 }
