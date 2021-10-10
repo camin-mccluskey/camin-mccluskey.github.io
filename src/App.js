@@ -10,6 +10,7 @@ import './App.scss';
 
 function App() {
   const [darkMode, setDarkMode] = useDarkMode(false);
+  const [activeSection, setActiveSection] = useState(null);
   const [content, setContent] = useState({md: ""});
 
   useEffect(()=> {
@@ -43,7 +44,7 @@ function App() {
         {/* Bio */}
         <div className="flex justify-center py-5">
           <p className="dark:text-white darkTrans w-4/5">
-          I'm an entreprenuer currently building something new at Entreprenuer First. Before that I was a full stack software engineer at Skyscanner. I am also the co-founder of an app for housemates - <a href="https://inhouseapp.io">inHouse</a>.
+          I'm an entreprenuer currently building something new at Entreprenuer First. Before that I was a full stack software engineer at Skyscanner. I am also the co-founder of an app for housemates - <a className="link" href="https://inhouseapp.io">inHouse</a>.
           </p>
         </div>
 
@@ -52,24 +53,34 @@ function App() {
 
         {/* Section Headings */}
         <div className="flex w-4/5 mx-auto justify-evenly text-center space-x-5 dark:text-white">
-          <p className="highlight">
-            THOUGHTS
-          </p>
-          <p className="highlight">
-            RESUME
-          </p>
-          <p className="highlight">
-            PROJECTS
-          </p>
+          <a onClick={e => setActiveSection("thoughts")}>
+            <p className={`highlight text-${activeSection === "thoughts" ? "green" : "white"}-500`}>
+              THOUGHTS
+            </p>
+          </a>
+          <a onClick={e => setActiveSection("resume")}>
+            <p className={`highlight text-${activeSection === "resume" ? "green" : "white"}-500`}>
+              RESUME
+            </p>
+          </a>
+          <a onClick={e => setActiveSection("projects")}>
+            <p className={`highlight text-${activeSection === "projects" ? "green" : "white"}-500`}>
+              PROJECTS
+            </p>
+          </a>
         </div>
 
         {/* Content */}
         <div className="w-4/5 justify-center mx-auto pt-10">
-          <ReactMarkdown 
+          {
+            activeSection === "thoughts" &&
+            <ReactMarkdown 
             remarkPlugins={[[remarkGfm]]}
-            className="prose w-full max-w-full"
+            className="prose w-full max-w-none"
             children={content.md}
-          />
+            />
+          }
+
         </div>
       </div>
     </div>
