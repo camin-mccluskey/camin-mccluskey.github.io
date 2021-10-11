@@ -49,7 +49,7 @@ function App() {
         {/* Bio */}
         <div className="flex justify-center py-5">
           <p className="dark:text-white darkTrans w-4/5">
-          I'm an entreprenuer currently building something new at Entreprenuer First. Before that I was a full stack software engineer at Skyscanner. I am also the co-founder of an app for housemates - <a className="link" href="https://inhouseapp.io">inHouse</a>.
+          I'm an entrepreneur currently building something new at Entrepreneur First. Before that I was a full stack software engineer at Skyscanner, a data analyst at Amazon and worked at some interesting startups. I am also the co-founder of an app for housemates - <a className="link" href="https://inhouseapp.io">inHouse</a>.
           </p>
         </div>
 
