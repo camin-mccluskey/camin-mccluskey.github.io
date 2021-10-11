@@ -49,7 +49,7 @@ function App() {
         {/* Bio */}
         <div className="flex justify-center py-5">
           <p className="dark:text-white darkTrans w-4/5">
-          I'm an entrepreneur currently building something new at Entrepreneur First. Before that I was a full stack software engineer at Skyscanner, a data analyst at Amazon and worked at some interesting startups. I am also the co-founder of an app for housemates - <a className="link" href="https://inhouseapp.io">inHouse</a>.
+          I'm an entrepreneur currently building something new at <a className="link" target="_blank" rel="noopener noreferrer" href="https://joinef.com">Entrepreneur First</a>. Before that I was a full stack software engineer at Skyscanner, a data analyst at Amazon and worked at some interesting startups. I am also the co-founder of an app for housemates - <a className="link" target="_blank" rel="noopener noreferrer" href="https://inhouseapp.io">inHouse</a>.
           </p>
         </div>
 
@@ -80,8 +80,8 @@ function App() {
           {
             activeSection === "thoughts" &&
             <div className="prose w-full max-w-none">
-              <ReactMarkdown className="dark:text-white darkTrans">
-                Some of my writing is availabel on [Medium](https://medium.com/@caminmccluskey). You can check out what I'm reading [here](https://camin.xyz/reading-list). On this site are some random thoughts I've not fully written up, but which may be of interest anyway.
+              <ReactMarkdown className="dark:text-white darkTrans w-full text-center pb-10">
+                Some of my writing is available on [Medium](https://medium.com/@caminmccluskey). You can check out what I'm reading [here](https://camin.xyz/reading-list). On this site are some random thoughts I've not fully written up, but which may be of interest anyway.
               </ReactMarkdown>
               <ReactMarkdown 
               remarkPlugins={[[remarkGfm]]}
@@ -97,11 +97,12 @@ function App() {
 
           { 
             activeSection === "resume" &&
-            <a className="dark:text-white darkTrans link" href={Resume} target="_blank">PDF Resume</a>
+            <a className="dark:text-white darkTrans link" href={Resume} target="_blank" rel="noopener noreferrer">PDF Resume</a>
           }
 
         </div>
-
+        
+        {/* Calendly Embed */}
         <PopupWidget 
           text="Let's Chat"
           url='https://calendly.com/camin-mccluskey/30min' 
