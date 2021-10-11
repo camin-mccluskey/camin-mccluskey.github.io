@@ -15,9 +15,9 @@ const ArticleCard = ({title, subtitle, content: {type, uri}}) => {
     //     children={"hello"}
     //   />
     // </div>
-    <div className="w-full h-full bg-gray-500 rounded-lg px-5 py-3">
-      <p className="text-2xl text-center">{title}</p>
-      <p className="pt-3">{subtitle}</p>
+    <div className="w-full sm:min-h-screen bg-gray-200 dark:bg-gray-700 rounded-lg px-5 py-3 darkTrans">
+      <p className="text-2xl text-center dark:text-white">{title}</p>
+      <p className="pt-3 text-gray-700 dark:text-gray-400">{subtitle}</p>
       {type === "medium" && 
         <div className="flex justify-end w-full pt-5">
           <div className="flex flex-col text-center">

@@ -28,10 +28,10 @@ function App() {
   }, [])
 
   return (
-    <div className="dark:bg-black bg-white min-w-screen min-h-screen darkTrans">
-      <div className="flex flex-col justify-center w-full">
+    <div className="dark:bg-black bg-white min-w-screen min-h-screen darkTrans pb-20">
+      <div className="flex flex-col justify-center w-full pt-10">
         {/* Dark mode toggle */}
-        <div className="flex justify-end transform md:-translate-x-4 md:translate-y-4 p-2 md:p-0">
+        <div className="top-0 right-0 p-2 md:p-5 fixed">
           <input id="toggle" class="toggle" type="checkbox" value={darkMode} onChange={e => setDarkMode(!darkMode)}/>
         </div>
 
