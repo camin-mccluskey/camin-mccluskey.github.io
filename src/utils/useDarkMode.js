@@ -18,11 +18,15 @@ export default function useDarkMode() {
   useEffect(
     () => {
       const className = "dark";
-      const element = window.document.body;
+      const body = window.document.body;
+      // cannot access this className in jsx 
+      const calendlyWidget = window.document.getElementsByClassName("calendly-badge-content")[0];
       if (enabled) {
-        element.classList.add(className);
+        body.classList.add(className);
+        calendlyWidget.classList.add(className, "darkTrans");
       } else {
-        element.classList.remove(className);
+        body.classList.remove(className);
+        calendlyWidget.classList.add(className, "darkTrans");
       }
     },
     [enabled] // Only re-call effect when value changes

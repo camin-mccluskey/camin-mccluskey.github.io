@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import useDarkMode from './utils/useDarkMode';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faMedium, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'
 import EXAMPLE from './posts/example.md';
 import Resume from './resume/resume.pdf';
 import { PopupWidget } from "react-calendly";
+import Data from './data';
 import './App.scss';
+import ArticleCard from './components/ArticleCard';
 
 
 function App() {
@@ -58,35 +58,33 @@ function App() {
 
         {/* Section Headings */}
         <div className="flex w-4/5 mx-auto justify-evenly text-center space-x-5 dark:text-white">
-          <a onClick={e => setActiveSection("thoughts")}>
+          <button onClick={e => setActiveSection("thoughts")}>
             <p className={`highlight text-${activeSection === "thoughts" ? "green" : "white"}-500`}>
               THOUGHTS
             </p>
-          </a>
-          <a onClick={e => setActiveSection("projects")}>
+          </button>
+          <button onClick={e => setActiveSection("projects")}>
             <p className={`highlight text-${activeSection === "projects" ? "green" : "white"}-500`}>
               PROJECTS
             </p>
-          </a>
-          <a onClick={e => setActiveSection("resume")}>
+          </button>
+          <button onClick={e => setActiveSection("resume")}>
             <p className={`highlight text-${activeSection === "resume" ? "green" : "white"}-500`}>
               RESUME
             </p>
-          </a>
+          </button>
         </div>
 
         {/* Content */}
-        <div className="w-4/5 justify-center mx-auto pt-5">
+        <div className="w-4/5 justify-center mx-auto pt-10">
           {
             activeSection === "thoughts" &&
-            <div className="prose w-full max-w-none">
-              <ReactMarkdown className="dark:text-white darkTrans w-full text-center pb-10">
-                Some of my writing is available on [Medium](https://medium.com/@caminmccluskey). You can check out what I'm reading [here](https://camin.xyz/reading-list). On this site are some random thoughts I've not fully written up, but which may be of interest anyway.
-              </ReactMarkdown>
-              <ReactMarkdown 
-              remarkPlugins={[[remarkGfm]]}
-              children={content.md}
-              />
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-12">
+              {Data.thoughts.map(t => {
+                return (
+                  <ArticleCard title={t.title} subtitle={t.subtitle} content={t.content}/>
+                )
+              })}
             </div>
           }
 
@@ -105,7 +103,8 @@ function App() {
         {/* Calendly Embed */}
         <PopupWidget 
           text="Let's Chat"
-          url='https://calendly.com/camin-mccluskey/30min' 
+          url='https://calendly.com/camin-mccluskey/30min'
+          className="darkTrans"
           color={darkMode ? "white" : "black"}
           textColor={darkMode ? "black" : "white"}
         />
