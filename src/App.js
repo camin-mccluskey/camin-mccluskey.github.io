@@ -28,15 +28,15 @@ function App() {
   }, [])
 
   return (
-    <div className="dark:bg-black bg-white w-screen h-screen darkTrans">
+    <div className="dark:bg-black bg-white min-w-screen min-h-screen darkTrans">
       <div className="flex flex-col justify-center w-full">
         {/* Dark mode toggle */}
-        <div className="flex justify-end p-2">
+        <div className="flex justify-end transform md:-translate-x-4 md:translate-y-4 p-2 md:p-0">
           <input id="toggle" class="toggle" type="checkbox" value={darkMode} onChange={e => setDarkMode(!darkMode)}/>
         </div>
 
         {/* Title */}
-        <p className="text-3xl md:text-5xl text-center dark:text-white darkTrans">Camin McCluskey</p>
+        <p className="text-3xl md:text-5xl text-center dark:text-white darkTrans font-mono">Camin McCluskey</p>
 
         {/* Social Links */}
         <div className="flex space-x-5 md:space-x-10 justify-center pt-2 md:pt-5 dark:text-white text-xl md:text-3xl">
