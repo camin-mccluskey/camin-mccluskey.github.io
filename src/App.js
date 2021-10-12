@@ -57,19 +57,19 @@ function App() {
         <div className="w-4/5 h-px dark:bg-gray-200 darkTrans bg-gray-800 self-center my-5"/>
 
         {/* Section Headings */}
-        <div className="flex w-4/5 mx-auto justify-evenly text-center space-x-5 dark:text-white">
+        <div className="grid grid-cols-3 w-4/5 mx-auto text-center space-x-5 dark:text-white">
           <button onClick={e => setActiveSection("thoughts")}>
-            <p className={`highlight text-${activeSection === "thoughts" ? "green" : "white"}-500`}>
+            <p className={`highlight text-${activeSection === "thoughts" ? "green" : "white"}-500 md:text-xl md:font-bold`}>
               THOUGHTS
             </p>
           </button>
           <button onClick={e => setActiveSection("projects")}>
-            <p className={`highlight text-${activeSection === "projects" ? "green" : "white"}-500`}>
+            <p className={`highlight text-${activeSection === "projects" ? "green" : "white"}-500 md:text-xl md:font-bold`}>
               PROJECTS
             </p>
           </button>
           <button onClick={e => setActiveSection("resume")}>
-            <p className={`highlight text-${activeSection === "resume" ? "green" : "white"}-500`}>
+            <p className={`highlight text-${activeSection === "resume" ? "green" : "white"}-500 md:text-xl md:font-bold`}>
               RESUME
             </p>
           </button>
