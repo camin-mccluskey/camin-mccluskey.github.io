@@ -1,14 +1,7 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: 'class',
   theme: {
-    screens: {
-      // required for mobile
-      'xs': '475px',
-      ...defaultTheme.screens,
-    },
     minHeight: {
       '0': '0px',
       '250': '250px',

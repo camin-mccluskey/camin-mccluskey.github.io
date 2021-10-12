@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <div className="dark:bg-black bg-white min-w-screen min-h-screen darkTrans pb-20">
+    <div className="dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pb-20">
       <div className="flex flex-col justify-center w-full pt-10">
         {/* Dark mode toggle */}
         <div className="top-0 right-0 p-2 md:p-5 fixed">
@@ -82,7 +82,7 @@ function App() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-12">
               {Data.thoughts.map(t => {
                 return (
-                  <ArticleCard title={t.title} subtitle={t.subtitle} content={t.content}/>
+                  <ArticleCard title={t.title} subtitle={t.subtitle} updated={t.updated} content={t.content}/>
                 )
               })}
             </div>
@@ -95,7 +95,9 @@ function App() {
 
           { 
             activeSection === "resume" &&
-            <a className="dark:text-white darkTrans link" href={Resume} target="_blank" rel="noopener noreferrer">PDF Resume</a>
+            <div className="flex sm:justify-start justify-center w-full ">
+              <a className="dark:text-white darkTrans link" href={Resume} target="_blank" rel="noopener noreferrer">PDF Resume</a>
+            </div>
           }
 
         </div>
