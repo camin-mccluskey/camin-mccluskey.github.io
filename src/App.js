@@ -29,15 +29,18 @@ function App() {
 
   return (
     <div className="dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pb-20">
-      <div className="flex flex-col justify-center w-full pt-10">
+      <div className="flex flex-col justify-center w-full pt-10 relative">
         {/* Dark mode toggle */}
-        <div className="top-0 right-0 p-2 md:p-5 fixed">
+        <div className="top-0 right-0 p-2 md:p-5 fixed z-50">
           <input id="toggle" class="toggle" type="checkbox" value={darkMode} onChange={e => setDarkMode(!darkMode)}/>
         </div>
 
         {/* Title */}
         <div className="flex justify-center">
-          <p className="text-3xl md:text-5xl text-center dark:text-white darkTrans font-mono">{'>'} camin-mccluskey</p>
+          <div className="flex text-3xl md:text-5xl text-center dark:text-white darkTrans font-mono">
+            <p className="pr-1">{'>'}</p>
+            <p>camin-mccluskey</p>
+          </div>
           <div className="w-2 bg-green-400 ml-1 animate-pulse-disappear"/>
         </div>
 
@@ -60,19 +63,19 @@ function App() {
         <div className="w-4/5 h-px dark:bg-gray-200 darkTrans bg-gray-800 self-center my-5"/>
 
         {/* Section Headings */}
-        <div className="grid grid-cols-3 w-4/5 mx-auto text-center space-x-5 dark:text-white md:text-xl font-mono">
+        <div className="grid grid-cols-3 w-4/5 mx-auto text-center space-x-5 dark:text-white md:text-xl font-mono cursor-pointer">
           <button onClick={e => setActiveSection("thoughts")}>
-            <p className={`highlight text-${activeSection === "thoughts" ? "green" : "white"}-500`}>
+            <p className={`highlight text-${activeSection === "thoughts" ? "green" : "white"}-400`}>
               THOUGHTS
             </p>
           </button>
           <button onClick={e => setActiveSection("projects")}>
-            <p className={`highlight text-${activeSection === "projects" ? "green" : "white"}-500`}>
+            <p className={`highlight text-${activeSection === "projects" ? "green" : "white"}-400`}>
               PROJECTS
             </p>
           </button>
           <button onClick={e => setActiveSection("resume")}>
-            <p className={`highlight text-${activeSection === "resume" ? "green" : "white"}-500`}>
+            <p className={`highlight text-${activeSection === "resume" ? "green" : "white"}-400`}>
               RESUME
             </p>
           </button>
@@ -99,7 +102,7 @@ function App() {
           { 
             activeSection === "resume" &&
             <div className="flex sm:justify-start justify-center w-full ">
-              <a className="dark:text-white darkTrans link" href={Resume} target="_blank" rel="noopener noreferrer">PDF Resume</a>
+              <a className="link darkTrans" href={Resume} target="_blank" rel="noopener noreferrer">PDF Resume</a>
             </div>
           }
 

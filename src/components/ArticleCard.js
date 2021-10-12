@@ -25,7 +25,7 @@ const ArticleCard = ({title, subtitle, updated, content: {type, uri}}) => {
           <div className="flex justify-between items-end w-full dark:text-white">
             <p className="font-thin text-gray-800 dark:text-gray-400 darkTrans">{updated}</p>
             <div className="flex flex-col text-center">
-              <p className="text-2xl"><FontAwesomeIcon icon={faMedium}/></p>
+              <p className="text-2xl darkTrans"><FontAwesomeIcon icon={faMedium}/></p>
               <p className="text-xs dark:text-gray-400 darkTrans">Medium</p>
             </div>
           </div>
