@@ -36,7 +36,10 @@ function App() {
         </div>
 
         {/* Title */}
-        <p className="text-3xl md:text-5xl text-center dark:text-white darkTrans font-mono">Camin McCluskey</p>
+        <div className="flex justify-center">
+          <p className="text-3xl md:text-5xl text-center dark:text-white darkTrans font-mono">{'>'} camin-mccluskey</p>
+          <div className="w-2 bg-green-400 ml-1 animate-pulse-disappear"/>
+        </div>
 
         {/* Social Links */}
         <div className="flex space-x-5 md:space-x-10 justify-center pt-2 md:pt-5 dark:text-white text-xl md:text-3xl">
@@ -48,7 +51,7 @@ function App() {
 
         {/* Bio */}
         <div className="flex justify-center py-5">
-          <p className="dark:text-white darkTrans w-4/5">
+          <p className="dark:text-white w-4/5 darkTrans">
             I'm an entrepreneur currently building something new at <a className="link" target="_blank" rel="noopener noreferrer" href="https://joinef.com">Entrepreneur First</a>. Before that I was a full stack software engineer at Skyscanner, a data analyst at Amazon and worked at some interesting startups. I am also the co-founder of an app for housemates - <a className="link" target="_blank" rel="noopener noreferrer" href="https://inhouseapp.io">inHouse</a>.
           </p>
         </div>
@@ -57,19 +60,19 @@ function App() {
         <div className="w-4/5 h-px dark:bg-gray-200 darkTrans bg-gray-800 self-center my-5"/>
 
         {/* Section Headings */}
-        <div className="grid grid-cols-3 w-4/5 mx-auto text-center space-x-5 dark:text-white">
+        <div className="grid grid-cols-3 w-4/5 mx-auto text-center space-x-5 dark:text-white md:text-xl font-mono">
           <button onClick={e => setActiveSection("thoughts")}>
-            <p className={`highlight text-${activeSection === "thoughts" ? "green" : "white"}-500 md:text-xl md:font-bold`}>
+            <p className={`highlight text-${activeSection === "thoughts" ? "green" : "white"}-500`}>
               THOUGHTS
             </p>
           </button>
           <button onClick={e => setActiveSection("projects")}>
-            <p className={`highlight text-${activeSection === "projects" ? "green" : "white"}-500 md:text-xl md:font-bold`}>
+            <p className={`highlight text-${activeSection === "projects" ? "green" : "white"}-500`}>
               PROJECTS
             </p>
           </button>
           <button onClick={e => setActiveSection("resume")}>
-            <p className={`highlight text-${activeSection === "resume" ? "green" : "white"}-500 md:text-xl md:font-bold`}>
+            <p className={`highlight text-${activeSection === "resume" ? "green" : "white"}-500`}>
               RESUME
             </p>
           </button>

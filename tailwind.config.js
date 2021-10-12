@@ -11,7 +11,21 @@ module.exports = {
       'full': '100%',
       'screen': '100vh'
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        'pulse-disappear': {
+          '0%, 100%': {
+            opacity: '0',
+          },
+          '50%': {
+            opacity: '1',
+          },
+        },
+      },
+      animation: {
+        'pulse-disappear': 'pulse-disappear 1s step-end infinite',
+      },
+    },
   },
   variants: {
     extend: {},
