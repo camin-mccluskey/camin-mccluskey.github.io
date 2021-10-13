@@ -23,14 +23,13 @@ function Home() {
         {/* Title */}
         <div className="flex justify-center">
           <div className="flex text-3xl md:text-5xl text-center dark:text-white darkTrans font-mono">
-            <p className="pr-1">{'>'}</p>
-            <p>camin-mccluskey</p>
+            <p className="pr-2">{'>'}</p>
+            <p className="h-full pb-1.5 overflow-x-hidden overflow-y-visible border-r-4 tracking-tight whitespace-nowrap animate-typing">camin-mccluskey</p>
           </div>
-          <div className="w-2 bg-green-400 ml-1 animate-pulse-disappear"/>
         </div>
 
         {/* Social Links */}
-        <div className="flex space-x-5 md:space-x-10 justify-center pt-2 md:pt-5 dark:text-white text-xl md:text-3xl">
+        <div className="flex space-x-5 md:space-x-10 justify-center md:pt-1 dark:text-white text-xl md:text-3xl">
           <a href="https://twitter.com/Camin_McCluskey"><FontAwesomeIcon icon={faTwitter} className="highlight"/></a>
           <a href="https://medium.com/@caminmccluskey"><FontAwesomeIcon icon={faMedium} className="highlight" /></a>
           <a href="https://www.linkedin.com/in/camin-mccluskey"><FontAwesomeIcon icon={faLinkedin} className="highlight" /></a>

@@ -13,17 +13,26 @@ module.exports = {
     },
     extend: {
       keyframes: {
-        'pulse-disappear': {
+        'blink-caret': {
           '0%, 100%': {
-            opacity: '0',
+            'border-color': 'transparent',
           },
           '50%': {
-            opacity: '1',
+            'border-color': '#34D399',
+          },
+        },
+        'typing': {
+          '0%': {
+            width: '0%'
+          },
+          '100%': {
+            width: '100%'
           },
         },
       },
       animation: {
-        'pulse-disappear': 'pulse-disappear 1s step-end infinite',
+        'blink-caret': 'blink-caret 1s step-end infinite',
+        'typing': 'typing 1.5s steps(16, end) 1.5s 1 normal both, blink-caret 1s step-end infinite'
       },
     },
   },
