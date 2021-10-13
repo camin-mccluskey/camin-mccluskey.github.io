@@ -1,10 +1,10 @@
-import EXAMPLE from './posts/example.md';
+import EXAMPLE from './content/posts/example.md';
 
 
 export default {
   thoughts: [
     {
-      id: 0,
+      id: "hw",
       title: "Hello World",
       subtitle: "A post about the redesign of this site in React with Tailwind CSS",
       updated: "2021/10/12",
@@ -14,7 +14,7 @@ export default {
       }
     },
     {
-      id: 1,
+      id: "stable",
       title: "Stable Future",
       subtitle: "Some thoughts around entropy and predicatibily of the future",
       updated: "2021/10/12",
@@ -24,7 +24,7 @@ export default {
       }
     },
     {
-      id: 2,
+      id: "cross-account-framework",
       title: "A Framework for Configuring Cross-Account Access in AWS",
       subtitle: "Configuring cross account access permissions can be tricky. Here’s a framework to get it right every time.",
       updated: "2020/11/20",
@@ -34,7 +34,7 @@ export default {
       }
     },
     {
-      id: 3,
+      id: "react-gh-pages",
       title: "Deploy a React Application to the Internet Quickly (And for Free)",
       subtitle: "Deploying a React website to the public internet is fast and free using Github Pages. This guide shows you how.",
       updated: "2020/08/06",
@@ -44,7 +44,7 @@ export default {
       }
     },
     {
-      id: 4,
+      id: "11-strategies",
       title: "11 Strategies for Managing Dependencies Between Agile Squads",
       subtitle: "Agile squads are supposed to be cross-functional, atomic, and capable of delivering a product to the end user completely independently. However, as an organisation scales and the product becomes more complex, issues with dependencies start to creep in.",
       updated: "2020/07/20",
@@ -54,7 +54,7 @@ export default {
       }
     },
     {
-      id: 5,
+      id: "pums",
       title: "Personal User Manuals — The Good, the Bad, and a Template",
       subtitle: "What is a personal user manual and how can it help improve your team?",
       updated: "2020/07/10",
@@ -64,7 +64,7 @@ export default {
       }
     },
     {
-      id: 6,
+      id: "local-dynamodb",
       title: "A GUI for Local DynamoDB — dynamodb-admin",
       subtitle: "How to set up a GUI for Local DynamoDB",
       updated: "2020/06/29",
