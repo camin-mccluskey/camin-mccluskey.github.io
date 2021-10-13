@@ -1,5 +1,3 @@
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'
 import {
   Link,
 } from "react-router-dom";
@@ -7,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMedium } from '@fortawesome/free-brands-svg-icons';
 
 
-const ArticleCard = ({title, subtitle, updated, content: {type, uri}}) => {
+const ArticleCard = ({id, title, subtitle, updated, content: {type, uri}}) => {
   const isMedium = type === "medium";
   
   const logo = isMedium ? (
@@ -30,19 +28,10 @@ const ArticleCard = ({title, subtitle, updated, content: {type, uri}}) => {
       </div>
   )
 
-  const content = isMedium ? <a href={uri} target="_blank">{innerContent}</a> : <Link to="/thoughts">{innerContent}</Link>
+  const content = isMedium ? <a href={uri} target="_blank">{innerContent}</a> : <Link to={`/thoughts/${id}`}>{innerContent}</Link>
   
 
   return (
-    // <div className="prose w-full max-w-none">
-    //   {/* <ReactMarkdown className="dark:text-white darkTrans w-full text-center pb-10">
-    //     Some of my writing is available on [Medium](https://medium.com/@caminmccluskey). You can check out what I'm reading [here](https://camin.xyz/reading-list). On this site are some random thoughts I've not fully written up, but which may be of interest anyway.
-    //   </ReactMarkdown> */}
-    //   <ReactMarkdown 
-    //     remarkPlugins={[[remarkGfm]]}
-    //     children={"hello"}
-    //   />
-    // </div>
     <>
       {content}
     </>

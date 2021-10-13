@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import useDarkMode from '../utils/useDarkMode';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faMedium, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -11,19 +11,6 @@ import ArticleCard from '../components/ArticleCard';
 function Home() {
   const [darkMode, setDarkMode] = useDarkMode(false);
   const [activeSection, setActiveSection] = useState(null);
-  
-  // const [content, setContent] = useState({md: ""})
-
-  // // https://stackoverflow.com/questions/31710768/how-can-i-fetch-an-array-of-urls-with-promise-all 
-  // // fetch all posts in a controlled way
-  // useEffect(()=> {
-  //   fetch(EXAMPLE)
-  //     .then((res) => res.text())
-  //     .then((md) => {
-  //       console.log(md);
-  //       setContent({ md })
-  //     })
-  // }, [])
 
   return (
     <div className="dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pb-20">
@@ -86,7 +73,7 @@ function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-12">
               {Data.thoughts.map(t => {
                 return (
-                  <ArticleCard title={t.title} subtitle={t.subtitle} updated={t.updated} content={t.content}/>
+                  <ArticleCard id={t.id} title={t.title} subtitle={t.subtitle} updated={t.updated} content={t.content}/>
                 )
               })}
             </div>
