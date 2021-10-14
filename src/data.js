@@ -96,7 +96,7 @@ export default {
     {
       id: "inhouse-web",
       title: "inHouse - an app for housemates",
-      description: "A kind of, sort of, startup I founded with my roomates to make spliting expenses and assigning tasks simple. I built a website and a cross platform mobile app, got a few thousand downloads, went through YC's Startup School and learned in the process.",
+      description: "A kind of, sort of, startup I founded with my roomates to make spliting expenses and assigning tasks simple. I built a website and a cross platform mobile app, got a few thousand downloads, went through YC's Startup School and learned a lot in the process.",
       content: {
        	uri: "https://inhouseapp.io",
 	      badges: ['react', 'node', 'aws', 'graphql', 'swift', 'kotlin']

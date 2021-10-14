@@ -10,15 +10,18 @@ const Project = ({ project }) => {
                     p-3 flex justify-between
                     transition-all ease-in-out duration-300 transform  hover:scale-110"
     >
-        <div>
+        <div className="w-4/5">
           <p className="text-2xl dark:text-white darkTrans">{title}</p>
           <p className="py-3 text-gray-700 dark:text-gray-400 darkTrans">{description}</p>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center w-1/5 justify-around">
           {badges.map(b => {
             const badgeUrl = `${imgUrl}${imgMap[b]}`;
-            console.log(badgeUrl)
-            return <img height={30} width={30} src={badgeUrl}/>
+            return (
+              <div clasName="h-30 w-30">
+                <img width={30} height={30} src={badgeUrl}/>
+              </div>
+            )
           })}
         </div>
     </div>
