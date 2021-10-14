@@ -6,11 +6,12 @@ import Resume from '../content/resume/resume.pdf';
 import { PopupWidget } from "react-calendly";
 import Data from '../data';
 import ArticleCard from '../components/ArticleCard';
+import ProjectsList from '../components/ProjectsList';
 
 
 function Home() {
   const [darkMode, setDarkMode] = useDarkMode(false);
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection, setActiveSection] = useState("thoughts");
 
   return (
     <div className="dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pb-20">
@@ -80,7 +81,7 @@ function Home() {
 
           {
             activeSection === "projects" &&
-            <p>Some things around projects I've done</p>
+            <ProjectsList projects={Data.projects} />
           }
 
           { 
@@ -94,7 +95,7 @@ function Home() {
         
         {/* Calendly Embed */}
         <PopupWidget 
-          text="Let's Chat"
+          text="Book a Meeting"
           url='https://calendly.com/camin-mccluskey/30min'
           className="darkTrans"
           color={darkMode ? "white" : "black"}

@@ -12,6 +12,10 @@ module.exports = {
       'screen': '100vh'
     },
     extend: {
+      boxShadow: {
+        'dark-sm': '0 1px 2px 0 rgba(0, 0, 0, 0.0)',
+        'dark-lg': '0 10px 15px -3px #34D399, 0 4px 6px -2px #34D399',
+      },
       keyframes: {
         'blink-caret': {
           '0%, 100%': {
@@ -37,7 +41,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      boxShadow: ['dark'],
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),

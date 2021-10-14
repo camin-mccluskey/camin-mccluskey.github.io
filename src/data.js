@@ -76,13 +76,49 @@ export default {
   ],
   projects: [
     {
-      id: 0,
+      id: "reading-list",
+      title: "Reading List ",
+      description: "A list of books I'm currently reading and one's I've read",
+      content: {
+       	uri: "https://camin.xyz/reading-list",
+	      badges: []
+     	}  	
+    },
+    {
+      id: "uc",
       title: "Ulysess Companion",
-      description: "A companion app for reading Jame Joyce's modern classic",
+      description: "A companion app for reading Jame Joyce's modern classic Ulysess.",
       content: {
        	uri: "https://camin.xyz/ulysess-companion",
 	      badges: []
      	}  	
-    }
+    },
+    {
+      id: "inhouse-web",
+      title: "inHouse - an app for housemates",
+      description: "A kind of, sort of, startup I founded with my roomates to make spliting expenses and assigning tasks simple. I built a website and a react native mobile app, got a few thousand downloads, went through YC's Startup School and learned in the process.",
+      content: {
+       	uri: "https://inhouseapp.io",
+	      badges: []
+     	}  	
+    },
+    {
+      id: "planning-poker-overlay",
+      title: "Zoom Planning Poker Overlay",
+      description: "During covid lockdown my team at Skyscanner, like everyone else, went fully remote. I thought I could make our sprint estimation sessions a bit more fun by creating an overlay, which would work on Zoom (or your meeting software of choice). Basically, it uses computer vision to determine what point estimate you are giving and places an overlay on the screen of that number. You could use it for this purpose or make your own fun overlays and gestures.",
+      content: {
+       	uri: "https://github.com/camin-mccluskey/zoom-planning-poker-computer-vision-overlay",
+	      badges: []
+     	}  	
+    },
+    {
+      id: "pum-template",
+      title: "Personal User Manual Template",
+      description: "A template for making your own Personal User Manual, often called a personal README",
+      content: {
+       	uri: "https://github.com/camin-mccluskey/personal-user-manual-template",
+	      badges: []
+     	}  	
+    },
   ]
 }
