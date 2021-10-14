@@ -78,10 +78,10 @@ export default {
     {
       id: "reading-list",
       title: "Reading List ",
-      description: "A list of books I'm currently reading and one's I've read",
+      description: "A list of books I'm currently reading and ones I've read",
       content: {
        	uri: "https://camin.xyz/reading-list",
-	      badges: []
+	      badges: ['markdown']
      	}  	
     },
     {
@@ -90,16 +90,16 @@ export default {
       description: "A companion app for reading Jame Joyce's modern classic Ulysess.",
       content: {
        	uri: "https://camin.xyz/ulysess-companion",
-	      badges: []
+	      badges: ['react', 'tailwind']
      	}  	
     },
     {
       id: "inhouse-web",
       title: "inHouse - an app for housemates",
-      description: "A kind of, sort of, startup I founded with my roomates to make spliting expenses and assigning tasks simple. I built a website and a react native mobile app, got a few thousand downloads, went through YC's Startup School and learned in the process.",
+      description: "A kind of, sort of, startup I founded with my roomates to make spliting expenses and assigning tasks simple. I built a website and a cross platform mobile app, got a few thousand downloads, went through YC's Startup School and learned in the process.",
       content: {
        	uri: "https://inhouseapp.io",
-	      badges: []
+	      badges: ['react', 'node', 'aws', 'graphql', 'swift', 'kotlin']
      	}  	
     },
     {
@@ -108,7 +108,7 @@ export default {
       description: "During covid lockdown my team at Skyscanner, like everyone else, went fully remote. I thought I could make our sprint estimation sessions a bit more fun by creating an overlay, which would work on Zoom (or your meeting software of choice). Basically, it uses computer vision to determine what point estimate you are giving and places an overlay on the screen of that number. You could use it for this purpose or make your own fun overlays and gestures.",
       content: {
        	uri: "https://github.com/camin-mccluskey/zoom-planning-poker-computer-vision-overlay",
-	      badges: []
+	      badges: ['node', 'tensorflow']
      	}  	
     },
     {
@@ -117,7 +117,34 @@ export default {
       description: "A template for making your own Personal User Manual, often called a personal README",
       content: {
        	uri: "https://github.com/camin-mccluskey/personal-user-manual-template",
-	      badges: []
+	      badges: ['markdown']
+     	}  	
+    },
+    {
+      id: "rl-sandox",
+      title: "Reinforcement Learning Sandbox",
+      description: "Playing around with OpenAI's Gym for RL. Haven't gotten around to implementing most of the gym's I planned on.",
+      content: {
+       	uri: "https://github.com/camin-mccluskey/rl-sandbox",
+	      badges: ['python', 'tensorflow']
+     	}  	
+    },
+    {
+      id: "p5-gol",
+      title: "Conway's Game of Life in P5.js",
+      description: "Implemented Conway's GOL using P5.js, a lot of fun to mess around with.",
+      content: {
+       	uri: "https://editor.p5js.org/camin-mccluskey/full/9KIAu07_i",
+	      badges: ['node']
+     	}  	
+    },
+    {
+      id: "pokerwars-bot",
+      title: "Pokerwars Python Bot",
+      description: "I'm not a gambler but this was pretty fun to implement. Unfortunately they've closed down the service so my bot goes unused these days.",
+      content: {
+       	uri: "https://github.com/camin-mccluskey/pokerwars-python-bot",
+	      badges: ['python']
      	}  	
     },
   ]
