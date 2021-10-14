@@ -6,7 +6,7 @@ import Resume from '../content/resume/resume.pdf';
 import { PopupWidget } from "react-calendly";
 import Data from '../data';
 import ArticleItem from '../components/ArticleItem';
-import ProjectsList from '../components/ProjectsList';
+import ProjectGrid from '../components/ProjectGrid';
 
 
 function Home() {
@@ -81,7 +81,7 @@ function Home() {
 
           {
             activeSection === "projects" &&
-            <ProjectsList projects={Data.projects} />
+            <ProjectGrid projects={Data.projects} />
           }
 
           { 

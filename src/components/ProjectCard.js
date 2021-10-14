@@ -1,6 +1,6 @@
 import { imgUrl, imgMap } from '../assets/imgs/imgmap';
 
-const Project = ({ project }) => {
+const ProjectCard = ({ project }) => {
   const { title, description, content: { badges, uri } } = project;
   // badges from - https://devicon.dev/
   return (
@@ -17,4 +17,4 @@ const Project = ({ project }) => {
   )
 }
 
-export default Project;
+export default ProjectCard;
