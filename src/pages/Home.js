@@ -5,7 +5,7 @@ import { faTwitter, faMedium, faLinkedin, faGithub } from '@fortawesome/free-bra
 import Resume from '../content/resume/resume.pdf';
 import { PopupWidget } from "react-calendly";
 import Data from '../data';
-import ArticleCard from '../components/ArticleCard';
+import ArticleItem from '../components/ArticleItem';
 import ProjectsList from '../components/ProjectsList';
 
 
@@ -70,10 +70,10 @@ function Home() {
         <div className="w-4/5 justify-center mx-auto pt-10">
           {
             activeSection === "thoughts" &&
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className="w-full grid-cols-1 space-y-7">
               {Data.thoughts.map(t => {
                 return (
-                  <ArticleCard id={t.id} title={t.title} subtitle={t.subtitle} updated={t.updated} content={t.content}/>
+                  <ArticleItem id={t.id} title={t.title} subtitle={t.subtitle} updated={t.updated} content={t.content}/>
                 )
               })}
             </div>
