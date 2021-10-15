@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMedium } from '@fortawesome/free-brands-svg-icons';
 
 
-const ArticleItem = ({id, title, subtitle, updated, content: {type, uri}}) => {
+const ArticleItem = ({id, title, subtitle, updated, tags, content: {type, uri}}) => {
   const isMedium = type === "medium";
   
   // const logo = isMedium ? (
@@ -36,9 +36,17 @@ const ArticleItem = ({id, title, subtitle, updated, content: {type, uri}}) => {
   
 
   return (
-    <>
-    {content}
-    </>
+    // <>
+    // {content}
+    // </>
+    <div>
+      <div className="flex font-thin text-gray-800 dark:text-gray-400 ">
+        <p className="darkTrans pr-2">{updated}</p>
+        { tags.length > 0 && <p className="darkTrans"> - {tags.join(', ')}</p> }
+      </div>
+      <p className="text-2xl dark:text-white darkTrans font-mono">{title}</p>
+      <p className="py-3 text-gray-700 dark:text-gray-400 darkTrans font-thin text-lg">{subtitle}</p>
+    </div>
   )
 }
 
