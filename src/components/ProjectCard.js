@@ -13,6 +13,12 @@ const ProjectCard = ({ project }) => {
         <p className="text-2xl text-center dark:text-white darkTrans">{title}</p>
         <p className="py-3 text-gray-700 dark:text-gray-400 darkTrans">{description}</p>
       </div>
+      <div className="flex justify-between items-end w-full dark:text-white">
+        {badges.map(b => {
+          const src = `${imgUrl}${imgMap[b]}`;
+          return <img width={30} height={30} src={src} />
+        })}
+     </div>
     </div>
   )
 }
