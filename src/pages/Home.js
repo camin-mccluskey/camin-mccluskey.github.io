@@ -5,8 +5,8 @@ import { faTwitter, faMedium, faLinkedin, faGithub } from '@fortawesome/free-bra
 import Resume from '../content/resume/resume.pdf';
 import { PopupWidget } from "react-calendly";
 import Data from '../data';
-import ArticleItem from '../components/ArticleItem';
 import ProjectGrid from '../components/ProjectGrid';
+import ArticleList from '../components/ArticleList';
 
 
 function Home() {
@@ -70,13 +70,7 @@ function Home() {
         <div className="w-4/5 justify-center mx-auto pt-10">
           {
             activeSection === "thoughts" &&
-            <div className="w-full grid-cols-1 space-y-7">
-              {Data.thoughts.map(t => {
-                return (
-                  <ArticleItem id={t.id} title={t.title} subtitle={t.subtitle} updated={t.updated} content={t.content}/>
-                )
-              })}
-            </div>
+            <ArticleList articles={Data.thoughts} />
           }
 
           {
