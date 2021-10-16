@@ -8,7 +8,7 @@ export default {
       title: "Hello World",
       subtitle: "A post about the redesign of this site in React with Tailwind CSS",
       updated: "2021/10/12",
-      tags: ["frontend", "react", "tailwind css"],
+      tags: ["Frontend", "React", "Tailwind"],
       content: {
         type: "local",
         uri: EXAMPLE
