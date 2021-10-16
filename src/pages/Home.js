@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import useDarkMode from '../utils/useDarkMode';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faMedium, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Resume from '../content/resume/resume.pdf';
-import { PopupWidget } from "react-calendly";
 import Data from '../data';
 import ProjectGrid from '../components/ProjectGrid';
 import ArticleList from '../components/ArticleList';
+import DarkModeToggle from '../components/DarkModeToggle';
+import Header from '../components/Header';
+import CalendlyEmbed from '../components/CalendlyEmbed';
 
 
 function Home() {
@@ -16,26 +16,11 @@ function Home() {
   return (
     <div className="dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pb-20">
       <div className="flex flex-col justify-center w-full pt-10 relative">
+        { /* Header */ }
+        <Header />
+
         {/* Dark mode toggle */}
-        <div className="top-0 right-0 p-2 md:p-5 fixed z-50">
-          <input id="toggle" class="toggle" type="checkbox" value={darkMode} onChange={e => setDarkMode(!darkMode)}/>
-        </div>
-
-        {/* Title */}
-        <div className="flex justify-center">
-          <div className="flex text-3xl md:text-5xl text-center dark:text-white darkTrans font-mono">
-            <p className="pr-2">{'>'}</p>
-            <p className="h-full pb-1.5 pr-0.5 overflow-x-hidden overflow-y-visible border-r-4 tracking-tight whitespace-nowrap animate-typing">camin-mccluskey</p>
-          </div>
-        </div>
-
-        {/* Social Links */}
-        <div className="flex space-x-5 md:space-x-10 justify-center md:pt-1 dark:text-white text-xl md:text-3xl">
-          <a href="https://twitter.com/Camin_McCluskey"><FontAwesomeIcon icon={faTwitter} className="highlight"/></a>
-          <a href="https://medium.com/@caminmccluskey"><FontAwesomeIcon icon={faMedium} className="highlight" /></a>
-          <a href="https://www.linkedin.com/in/camin-mccluskey"><FontAwesomeIcon icon={faLinkedin} className="highlight" /></a>
-          <a href="https://github.com/camin-mccluskey"><FontAwesomeIcon icon={faGithub} className="highlight" /></a>
-        </div>
+        <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
 
         {/* Bio */}
         <div className="flex justify-center sm:py-5 md:py-10">
@@ -88,13 +73,7 @@ function Home() {
         </div>
         
         {/* Calendly Embed */}
-        <PopupWidget 
-          text="Book a Meeting"
-          url='https://calendly.com/camin-mccluskey/30min'
-          className="darkTrans"
-          color={darkMode ? "white" : "black"}
-          textColor={darkMode ? "black" : "white"}
-        />
+        <CalendlyEmbed darkMode={darkMode} />
       </div>
     </div>
   );

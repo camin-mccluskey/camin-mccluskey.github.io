@@ -32,20 +32,22 @@ const ArticleItem = ({id, title, subtitle, updated, tags, content: {type, uri}})
     </div>
   )
 
-  const content = isMedium ? <a href={uri} target="_blank">{innerContent}</a> : <Link to={`/thoughts/${id}`}>{innerContent}</Link>
+  const plainTitle = <p className="text-2xl dark:text-white darkTrans font-mono hover:underline max-w-max">{title}</p>
+  const linkTitle = isMedium ? 
+    <a href={uri} target="_blank">{plainTitle}</a> 
+    : 
+    <Link to={`/thoughts/${id}`}>{plainTitle}</Link>
   
 
   return (
-    // <>
-    // {content}
-    // </>
-    <div>
-      <div className="flex font-thin text-gray-800 dark:text-gray-400 ">
+    <div className="py-3">
+      <div className="flex font-thin text-gray-800 dark:text-green-400 ">
         <p className="darkTrans pr-2">{updated}</p>
         { tags.length > 0 && <p className="darkTrans"> - {tags.join(', ')}</p> }
       </div>
-      <p className="text-2xl dark:text-white darkTrans font-mono">{title}</p>
-      <p className="py-3 text-gray-700 dark:text-gray-400 darkTrans font-thin text-lg">{subtitle}</p>
+      {linkTitle}
+      <p className="py-3 text-gray-700 dark:text-gray-400 darkTrans font-thin text-xl">{subtitle}</p>
+      {/* add medium logo */}
     </div>
   )
 }
