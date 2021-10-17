@@ -42,21 +42,27 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: theme('colors.green.500'),
+              color: theme('colors.green.400'),
             },
             pre: {
               'background-color': theme('colors.gray.200'),
               padding: '3px'
             },
             'li::before': {
-              color: theme('colors.green.500'),
+              color: theme('colors.green.400'),
+            },
+            h1: {
+              'margin-bottom': '0rem',
+            },
+            '.articleMeta': {
+              color: theme('colors.green.400'),
             },
           },
         },
         dark: {
           css: {
             a: {
-              color: theme('colors.green.500'),
+              color: theme('colors.green.400'),
             },
             p: {
               color: theme('colors.white'),
@@ -77,11 +83,14 @@ module.exports = {
               color: theme('colors.white'),
             },
             'li::before': {
-              color: theme('colors.green.500'),
+              color: theme('colors.green.400'),
             },
             pre: {
               'background-color': theme('colors.gray.900'),
               padding: '3px'
+            },
+            'p.articleMeta': {
+              color: theme('colors.green.400'),
             },
           },
         }

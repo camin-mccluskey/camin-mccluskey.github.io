@@ -6,17 +6,18 @@ import data from '../data';
 import Header from '../components/Header';
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {coldarkCold, coldarkDark} from 'react-syntax-highlighter/dist/esm/styles/prism'
+import ArticleMeta from '../components/ArticleMeta';
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 
 const Article = ({ darkMode, setDarkMode }) => {
   const { id } = useParams();
-  const article = data.thoughts.find(e => e.id === id);
+  const { title, updated, tags, content: { uri }} = data.thoughts.find(e => e.id === id);
 
   const [content, setContent] = useState({md: ""})
 
   useEffect(()=> {
-    fetch(article.content.uri)
+    fetch(uri)
       .then((res) => res.text())
       .then((md) => {
         console.log(md);
@@ -34,7 +35,7 @@ const Article = ({ darkMode, setDarkMode }) => {
           linkTarget="_blank"
           components={{
             // assuming one title h1 tag - we can add the meta data here
-            h1: ({node, ...props}) => <h1 className="font-mono" {...props} />,
+            h1: ({node, ...props}) => <ArticleTitle updated={updated} tags={tags} {...props} />,
             h2: ({node, ...props}) => <h2 className="font-mono underline" {...props} />,
             h3: ({node, ...props}) => <h3 className="font-mono underline" {...props} />,
             h4: ({node, ...props}) => <h4 className="font-mono underline" {...props} />,
@@ -66,6 +67,13 @@ const Article = ({ darkMode, setDarkMode }) => {
   )
 }
 
-
+const ArticleTitle = ({updated, tags, ...props}) => {
+  return (
+    <div>
+      <h1 className="font-mono" {...props} />
+      <ArticleMeta updated={updated} tags={tags} />
+    </div>
+  )
+}
 
 export default Article;

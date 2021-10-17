@@ -3,6 +3,7 @@ import {
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMedium } from '@fortawesome/free-brands-svg-icons';
+import ArticleMeta from "./ArticleMeta";
 
 
 const ArticleItem = ({id, title, subtitle, updated, tags, content: {type, uri}}) => {
@@ -23,10 +24,7 @@ const ArticleItem = ({id, title, subtitle, updated, tags, content: {type, uri}})
 
   return (
     <div className="py-3">
-      <div className="flex font-thin text-gray-800 dark:text-green-400 pb-1">
-        <p className="darkTrans pr-1">{updated}</p>
-        { tags.length > 0 && <p className="darkTrans"> -- {tags.join(', ')}</p> }
-      </div>
+      <ArticleMeta updated={updated} tags={tags} />
       <div className="flex sm:items-start md:items-center">
         {linkTitle}
         {logo}
