@@ -36,13 +36,68 @@ module.exports = {
       },
       animation: {
         'blink-caret': 'blink-caret 1s step-end infinite',
-        'typing': 'typing 1.5s steps(16, end) 1.5s 1 normal both, blink-caret 1s step-end infinite'
+        'typing': 'typing 1.5s steps(16, end) 1s 1 normal both, blink-caret 1s step-end infinite'
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              color: theme('colors.green.500'),
+            },
+            pre: {
+              'background-color': theme('colors.gray.200'),
+              padding: '3px'
+            },
+            'li::before': {
+              color: theme('colors.green.500'),
+            },
+          },
+        },
+        dark: {
+          css: {
+            a: {
+              color: theme('colors.green.500'),
+            },
+            p: {
+              color: theme('colors.white'),
+            },
+            h1: {
+              color: theme('colors.white'),
+            },
+            h2: {
+              color: theme('colors.white'),
+            },
+            h3: {
+              color: theme('colors.white'),
+            },
+            strong: {
+              color: theme('colors.white'),
+            },
+            li: {
+              color: theme('colors.white'),
+            },
+            'li::before': {
+              color: theme('colors.green.500'),
+            },
+            pre: {
+              'background-color': theme('colors.gray.900'),
+              padding: '3px'
+            },
+          },
+        }
+      }),
+      listStyleType: (theme) => ({
+        decimal: {
+          color: theme('colors.white'),
+        },
+      }),
     },
   },
   variants: {
     extend: {
       boxShadow: ['dark'],
+      typography: ['dark'],
+      listStyleType: ['dark'],
     },
   },
   plugins: [

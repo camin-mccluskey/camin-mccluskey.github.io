@@ -6,7 +6,7 @@ This is a test of the blog post functionality. Lots and lots of content that wil
 
 __Trying out a code block.__
 
-```
+```js
 function helloWorld(text) {
   console.log(text);
 }

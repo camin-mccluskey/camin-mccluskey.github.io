@@ -16,7 +16,7 @@ const ArticleItem = ({id, title, subtitle, updated, tags, content: {type, uri}})
 
   const plainTitle = <p className="text-2xl dark:text-white darkTrans font-mono hover:underline max-w-max">{title}</p>
   const linkTitle = isMedium ? 
-    <a href={uri} target="_blank">{plainTitle}</a> 
+    <a href={uri} target="_blank" rel="noreferrer" >{plainTitle}</a> 
     : 
     <Link to={`/thoughts/${id}`}>{plainTitle}</Link>
   
