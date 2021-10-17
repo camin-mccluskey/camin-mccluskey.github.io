@@ -1,17 +1,14 @@
-import { useState } from 'react';
 import Resume from '../content/resume/resume.pdf';
-import Data from '../data';
-import ProjectGrid from '../components/ProjectGrid';
-import ArticleList from '../components/ArticleList';
+import data from '../data';
 import Header from '../components/Header';
+import Content from '../components/Content';
 import CalendlyEmbed from '../components/CalendlyEmbed';
 
 
 function Home({ darkMode, setDarkMode }) {
-  const [activeSection, setActiveSection] = useState("thoughts");
 
   return (
-    <div className="dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pb-20">
+    <div className="dark:bg-black min-w-screen min-h-screen darkTrans pb-20">
       <div className="flex flex-col justify-center w-full pt-8 relative">
         { /* Header */ }
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
@@ -26,45 +23,8 @@ function Home({ darkMode, setDarkMode }) {
         {/* Divider */}
         {/* <div className="w-4/5 h-px dark:bg-gray-200 darkTrans bg-gray-800 self-center my-5"/> */}
 
-        {/* Section Headings */}
-        <div className="grid grid-cols-3 w-4/5 mx-auto text-center gap-12 dark:text-white md:text-2xl font-mono">
-          <button onClick={e => setActiveSection("thoughts")}>
-            <p className={`highlight text-${activeSection === "thoughts" ? "green" : "white"}-400 cursor-pointer underline`}>
-              THOUGHTS
-            </p>
-          </button>
-          <button onClick={e => setActiveSection("projects")}>
-            <p className={`highlight text-${activeSection === "projects" ? "green" : "white"}-400 cursor-pointer underline`}>
-              PROJECTS
-            </p>
-          </button>
-          <button onClick={e => setActiveSection("resume")}>
-            <p className={`highlight text-${activeSection === "resume" ? "green" : "white"}-400 cursor-pointer underline`}>
-              RESUME
-            </p>
-          </button>
-        </div>
-
         {/* Content */}
-        <div className="w-4/5 justify-center mx-auto pt-10">
-          {
-            activeSection === "thoughts" &&
-            <ArticleList articles={Data.thoughts} />
-          }
-
-          {
-            activeSection === "projects" &&
-            <ProjectGrid projects={Data.projects} />
-          }
-
-          { 
-            activeSection === "resume" &&
-            <div className="flex sm:justify-start justify-center w-full ">
-              <a className="link darkTrans" href={Resume} target="_blank" rel="noopener noreferrer">PDF Resume</a>
-            </div>
-          }
-
-        </div>
+        <Content data={data}/>
         
         {/* Calendly Embed */}
         <CalendlyEmbed darkMode={darkMode} />

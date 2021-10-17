@@ -12,17 +12,26 @@ module.exports = {
       'screen': '100vh'
     },
     extend: {
-      boxShadow: {
+      boxShadow: (theme) => ({
         'dark-sm': '0 1px 2px 0 rgba(0, 0, 0, 0.0)',
-        'dark-lg': '0 10px 15px -3px #34D399, 0 4px 6px -2px #34D399',
-      },
-      keyframes: {
+        'dark-lg': `0 10px 15px -3px ${theme("colors.green.400")}, 0 4px 6px -2px ${theme("colors.green.400")}`,
+        'purple-lg': `0 10px 15px -3px ${theme("colors.purple.600")}, 0 4px 6px -2px ${theme("colors.purple.600")}`,
+      }),
+      keyframes: (theme) => ({
+        'dark-blink-caret': {
+          '0%, 100%': {
+            'border-color': 'transparent',
+          },
+          '50%': {
+            'border-color': theme("colors.green.400"),
+          },
+        },
         'blink-caret': {
           '0%, 100%': {
             'border-color': 'transparent',
           },
           '50%': {
-            'border-color': '#34D399',
+            'border-color': theme("colors.purple.600"),
           },
         },
         'typing': {
@@ -33,29 +42,39 @@ module.exports = {
             width: '100%'
           },
         },
-      },
+      }),
       animation: {
         'blink-caret': 'blink-caret 1s step-end infinite',
-        'typing': 'typing 1.5s steps(16, end) 1s 1 normal both, blink-caret 1s step-end infinite'
+        'dark-blink-caret': 'dark-blink-caret 1s step-end infinite',
+        'typing': 'typing 1.5s steps(16, end) 1s 1 normal both, blink-caret 1s step-end infinite',
+        'dark-typing': 'typing 1.5s steps(16, end) 1s 1 normal both, dark-blink-caret 1s step-end infinite',
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
             a: {
-              color: theme('colors.green.400'),
+              color: theme('colors.purple.600'),
             },
             pre: {
               'background-color': theme('colors.gray.200'),
               padding: '3px'
             },
-            'li::before': {
-              color: theme('colors.green.400'),
-            },
             h1: {
               'margin-bottom': '0rem',
             },
+            'ol > li::before': {
+              color: theme('colors.purple.600'),
+            },
+            'ul > li::before': {
+              'background-color': theme('colors.purple.600'),
+            },
             '.articleMeta': {
-              color: theme('colors.green.400'),
+              'padding-top': '0rem',
+              'padding-bottom': '0rem',
+            },
+            '.articleMeta > p': {
+              'margin-top': '0rem',
+              'margin-bottom': '0rem',
             },
           },
         },
@@ -82,15 +101,15 @@ module.exports = {
             li: {
               color: theme('colors.white'),
             },
-            'li::before': {
+            'ol > li::before': {
               color: theme('colors.green.400'),
+            },
+            'ul > li::before': {
+              'background-color': theme('colors.green.400'),
             },
             pre: {
               'background-color': theme('colors.gray.900'),
               padding: '3px'
-            },
-            'p.articleMeta': {
-              color: theme('colors.green.400'),
             },
           },
         }
@@ -107,6 +126,7 @@ module.exports = {
       boxShadow: ['dark'],
       typography: ['dark'],
       listStyleType: ['dark'],
+      animation: ['dark'],
     },
   },
   plugins: [

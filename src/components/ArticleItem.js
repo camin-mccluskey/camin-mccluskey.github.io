@@ -29,7 +29,7 @@ const ArticleItem = ({id, title, subtitle, updated, tags, content: {type, uri}})
         {linkTitle}
         {logo}
       </div>
-      <p className="py-3 text-gray-700 dark:text-gray-400 darkTrans font-thin text-xl">{subtitle}</p>
+      <p className="py-3 text-gray-700 dark:text-gray-400 darkTrans text-xl">{subtitle}</p>
     </div>
   )
 }
