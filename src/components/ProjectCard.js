@@ -1,9 +1,12 @@
 import { imgUrl, imgMap } from '../assets/imgs/imgmap';
 
+
 const ProjectCard = ({ project }) => {
   const { title, description, content: { badges, uri } } = project;
+
   // badges from - https://devicon.dev/
   return (
+    <a href={uri} target="_blank" rel="noopener noreferrer">
     <div className="flex flex-col w-full md:min-h-full sm:min-h-250 bg-gray-200 dark:bg-gray-900 rounded-lg px-5 py-3 
                     shadow-sm hover:shadow-lg dark:shadow-dark-sm dark:hover:shadow-dark-lg
                     cursor-pointer 
@@ -20,6 +23,7 @@ const ProjectCard = ({ project }) => {
         })}
      </div>
     </div>
+    </a>
   )
 }
 

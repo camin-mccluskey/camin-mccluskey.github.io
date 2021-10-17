@@ -105,10 +105,10 @@ export default {
     },
     {
       id: "uc",
-      title: "Ulysess Companion",
-      description: "A companion app for reading Jame Joyce's modern classic Ulysess.",
+      title: "Ulysses Companion",
+      description: "A companion app for reading Jame Joyce's modern classic.",
       content: {
-       	uri: "https://camin.xyz/ulysess-companion",
+       	uri: "https://camin.xyz/ulysses-companion",
 	      badges: ['react', 'tailwind']
      	}  	
     },
