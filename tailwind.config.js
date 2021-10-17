@@ -126,7 +126,7 @@ module.exports = {
       boxShadow: ['dark'],
       typography: ['dark'],
       listStyleType: ['dark'],
-      animation: ['dark'],
+      animation: ['dark'],  
     },
   },
   plugins: [
