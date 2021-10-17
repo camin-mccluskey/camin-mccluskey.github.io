@@ -31,6 +31,7 @@ const Article = ({ darkMode, setDarkMode }) => {
         <ReactMarkdown 
           remarkPlugins={[[remarkGfm]]}
           children={content.md}
+          linkTarget="_blank"
           components={{
             // assuming one title h1 tag - we can add the meta data here
             h1: ({node, ...props}) => <h1 className="font-mono" {...props} />,

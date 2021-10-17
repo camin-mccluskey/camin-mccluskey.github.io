@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-I was struck by this notion as I was typing on [Monkey Type](monkeytype.com), how could a machine help me improve my typing speed. On a superficial level, certainly there are letters I miss more frequently than others, perhaps certain 2 letter combinations I struggle to hit consistently. Perhaps entire words I mess up. But surely there is a deeper level of understanding that could be leveraged to improve my typing? 
+I was struck by this notion as I was typing on [Monkey Type](https://monkeytype.com), how could a machine help me improve my typing speed. On a superficial level, certainly there are letters I miss more frequently than others, perhaps certain 2 letter combinations I struggle to hit consistently. Perhaps entire words I mess up. But surely there is a deeper level of understanding that could be leveraged to improve my typing? 
 
 What makes words, keys, combinations "like" others in the set of word, keys, combinations that I miss? 
 
