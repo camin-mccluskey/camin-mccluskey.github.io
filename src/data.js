@@ -1,8 +1,20 @@
 import EXAMPLE from './content/posts/example.md';
+import helpful_machines from './content/posts/helpful_machines.md';
 
 
 export default {
   thoughts: [
+    {
+      id: "helpful-machines",
+      title: "Helpful Machines",
+      subtitle: "Meta learning post",
+      updated: "2021/10/17",
+      tags: ["ML", "Futurism"],
+      content: {
+        type: "local",
+        uri: helpful_machines
+      }
+    },
     {
       id: "hw",
       title: "Hello World",

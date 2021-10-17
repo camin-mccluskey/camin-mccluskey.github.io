@@ -3,8 +3,10 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
 import { useParams } from "react-router";
 import data from '../data';
+import Header from '../components/Header';
+import CalendlyEmbed from '../components/CalendlyEmbed';
 
-const Article = () => {
+const Article = ({ darkMode, setDarkMode }) => {
   const { id } = useParams();
   const articleUri = data.thoughts.find(e => e.id === id).content.uri;
 
@@ -20,14 +22,15 @@ const Article = () => {
   }, [])
   
   return (
-    <div className="prose w-full max-w-none">
-      {/* <ReactMarkdown className="dark:text-white darkTrans w-full text-center pb-10">
-        Some of my writing is available on [Medium](https://medium.com/@caminmccluskey). You can check out what I'm reading [here](https://camin.xyz/reading-list). On this site are some random thoughts I've not fully written up, but which may be of interest anyway.
-      </ReactMarkdown> */}
-      <ReactMarkdown 
-        remarkPlugins={[[remarkGfm]]}
-        children={content.md}
-      />
+    <div className="dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pt-8 pb-20">
+      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+      <div className="prose w-full max-w-none px-5">
+        <ReactMarkdown 
+          remarkPlugins={[[remarkGfm]]}
+          children={content.md}
+        />
+      </div>
+      {/* <CalendlyEmbed darkMode={darkMode} /> */}
     </div>
   )
 }

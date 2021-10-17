@@ -27,7 +27,7 @@ const ArticleItem = ({id, title, subtitle, updated, tags, content: {type, uri}})
         <p className="darkTrans pr-1">{updated}</p>
         { tags.length > 0 && <p className="darkTrans"> -- {tags.join(', ')}</p> }
       </div>
-      <div className="flex items-center">
+      <div className="flex sm:items-start md:items-center">
         {linkTitle}
         {logo}
       </div>

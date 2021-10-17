@@ -1,9 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faMedium, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import DarkModeToggle from './DarkModeToggle';
 
-const Header = () => {
+
+const Header = ({ darkMode, setDarkMode }) => {
   return (
-    <div>
+    <a>
+      <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
       {/* Title */}
       <div className="flex justify-center">
         <div className="flex text-3xl md:text-5xl text-center dark:text-white darkTrans font-mono">
@@ -13,7 +16,7 @@ const Header = () => {
       </div>
 
       {/* Social Links */}
-      <div className="flex space-x-5 md:space-x-10 justify-center md:pt-1 dark:text-white text-xl md:text-3xl">
+      <div className="flex space-x-5 md:space-x-10 justify-center md:pt-1 dark:text-white text-2xl md:text-3xl">
         <a href="https://twitter.com/Camin_McCluskey" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faTwitter} className="highlight"/>
         </a>
@@ -27,7 +30,7 @@ const Header = () => {
           <FontAwesomeIcon icon={faGithub} className="highlight" />
         </a>
       </div>
-  </div>
+  </a>
   )
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import './App.scss';
+import useDarkMode from './utils/useDarkMode';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,14 +10,16 @@ import Home from "./pages/Home"
 import Article from "./pages/Article";
 
 const App = () => {
+  const [darkMode, setDarkMode] = useDarkMode(false);
+
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <Home/>
+          <Home darkMode={darkMode} setDarkMode={setDarkMode} />
         </Route>
         <Route path="/thoughts/:id">
-          <Article />
+          <Article darkMode={darkMode} setDarkMode={setDarkMode} />
         </Route>
       </Switch>
     </Router>

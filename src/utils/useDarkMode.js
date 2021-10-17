@@ -19,14 +19,18 @@ export default function useDarkMode() {
     () => {
       const className = "dark";
       const body = window.document.body;
-      // cannot access this className in jsx 
+      // cannot access this className in jsx and only available on Home page
       const calendlyWidget = window.document.getElementsByClassName("calendly-badge-content")[0];
       if (enabled) {
         body.classList.add(className);
-        calendlyWidget.classList.add(className, "darkTrans");
+        if (calendlyWidget) {
+          calendlyWidget.classList.add(className, "darkTrans");
+        }
       } else {
         body.classList.remove(className);
-        calendlyWidget.classList.add(className, "darkTrans");
+        if (calendlyWidget) {
+          calendlyWidget.classList.add(className, "darkTrans");
+        }
       }
     },
     [enabled] // Only re-call effect when value changes
