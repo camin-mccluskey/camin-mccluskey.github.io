@@ -1,4 +1,3 @@
-import Resume from '../content/resume/resume.pdf';
 import data from '../data';
 import Header from '../components/Header';
 import Content from '../components/Content';

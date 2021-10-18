@@ -2,7 +2,7 @@ import EXAMPLE from './content/posts/example.md';
 import helpful_machines from './content/posts/helpful_machines.md';
 
 
-export default {
+const data = {
   thoughts: [
     {
       id: "helpful-machines",
@@ -168,3 +168,5 @@ export default {
     },
   ]
 }
+
+export default data;

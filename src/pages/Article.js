@@ -12,7 +12,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 const Article = ({ darkMode, setDarkMode }) => {
   const { id } = useParams();
-  const { title, updated, tags, content: { uri }} = data.thoughts.find(e => e.id === id);
+  const { updated, tags, content: { uri }} = data.thoughts.find(e => e.id === id);
 
   const [content, setContent] = useState({md: ""})
 
@@ -23,7 +23,7 @@ const Article = ({ darkMode, setDarkMode }) => {
         console.log(md);
         setContent({ md })
       })
-  }, [])
+  })
   
   return (
     <div className="dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pt-8 pb-20">
