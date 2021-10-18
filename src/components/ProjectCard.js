@@ -8,9 +8,9 @@ const ProjectCard = ({ project }) => {
   return (
     <a href={uri} target="_blank" rel="noopener noreferrer">
     <div className="flex flex-col w-full md:min-h-full sm:min-h-250 bg-gray-300 dark:bg-gray-900 rounded-lg px-5 py-3 
-                    hover:shadow-purple-lg dark:hover:shadow-dark-lg
+                    hover-hover:shadow-purple-lg dark:hover-hover:shadow-dark-lg
                     cursor-pointer 
-                    transition-all ease-in-out duration-300 transform hover:-translate-y-1 hover:scale-105"
+                    transition-all ease-in-out duration-300 transform hover-hover:-translate-y-1 hover-hover:scale-105"
     >
       <div className="flex-grow h-full">
         <p className="text-2xl text-center dark:text-white darkTrans font-mono">{title}</p>

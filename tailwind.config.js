@@ -122,6 +122,9 @@ module.exports = {
           color: theme('colors.white'),
         },
       }),
+      screens: {
+        'hover-hover': {'raw': '(hover: hover)'}, // fixes sticky hover on mobile
+      },
     },
   },
   variants: {
