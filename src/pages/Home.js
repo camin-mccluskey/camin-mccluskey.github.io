@@ -2,12 +2,13 @@ import data from '../data';
 import Header from '../components/Header';
 import Content from '../components/Content';
 import CalendlyEmbed from '../components/CalendlyEmbed';
+import Footer from '../components/Footer';
 
 
 function Home({ darkMode, setDarkMode }) {
 
   return (
-    <div className="dark:bg-black min-w-screen min-h-screen darkTrans pb-20">
+    <div className="dark:bg-black min-w-screen min-h-screen darkTrans pb-3">
       <div className="flex flex-col justify-center w-full pt-8 relative">
         { /* Header */ }
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
@@ -30,6 +31,8 @@ function Home({ darkMode, setDarkMode }) {
         
         {/* Calendly Embed */}
         <CalendlyEmbed darkMode={darkMode} />
+
+        <Footer />
       </div>
     </div>
   );
