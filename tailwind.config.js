@@ -123,7 +123,7 @@ module.exports = {
         },
       }),
       screens: {
-        'hover-hover': {'raw': '(hover: hover)'}, // fixes sticky hover on mobile
+        'betterhover': {'raw': '(hover: hover)'},
       },
     },
   },

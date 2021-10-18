@@ -13,7 +13,7 @@ const SectionsList = ({ activeSection, setActiveSection }) => {
         </p>
       </button>
       <button onClick={e => setActiveSection("resume")}>
-        <p className={getClass("reusme")}>
+        <p className={getClass("resume")}>
           RESUME
         </p>
       </button>
