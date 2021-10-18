@@ -86,6 +86,9 @@ module.exports = {
             p: {
               color: theme('colors.white'),
             },
+            '#metaItem': {
+              color: theme('colors.green.400'),
+            },
             h1: {
               color: theme('colors.white'),
             },
