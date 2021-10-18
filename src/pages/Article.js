@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {coldarkCold, coldarkDark} from 'react-syntax-highlighter/dist/esm/styles/prism'
 import ArticleMeta from '../components/ArticleMeta';
+import Footer from '../components/Footer';
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 
@@ -25,9 +26,9 @@ const Article = ({ darkMode, setDarkMode }) => {
   }, [])
   
   return (
-    <div className="dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pt-8 pb-20">
+    <div className="flex flex-col dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pt-8 pb-3">
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <div className="prose w-full max-w-none px-5 pt-5 dark:prose-dark">
+      <div className="prose w-full flex-grow max-w-none px-5 py-10 dark:prose-dark">
         <ReactMarkdown 
           remarkPlugins={[[remarkGfm]]}
           children={content.md}
@@ -62,6 +63,7 @@ const Article = ({ darkMode, setDarkMode }) => {
           }}
         />
       </div>
+      <Footer />
     </div>
   )
 }
