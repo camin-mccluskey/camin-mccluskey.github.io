@@ -16,14 +16,13 @@ const Article = ({ darkMode, setDarkMode }) => {
 
   const [content, setContent] = useState({md: ""})
 
-  useEffect(()=> {
+  useEffect(() => {
     fetch(uri)
       .then((res) => res.text())
       .then((md) => {
-        console.log(md);
         setContent({ md })
       })
-  })
+  }, [])
   
   return (
     <div className="dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pt-8 pb-20">
