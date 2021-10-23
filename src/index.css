@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.darkTrans {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+.highlight {
+  @apply transition ease-in-out duration-300 betterhover:dark:hover:text-green-400 betterhover:hover:text-purple-600 cursor-pointer transform betterhover:hover:scale-110 focus:scale-110 betterhover:hover:-translate-y-1;
+}
+
+.link {
+  @apply underline dark:text-green-400 text-purple-600 cursor-pointer darkTrans;
+}
