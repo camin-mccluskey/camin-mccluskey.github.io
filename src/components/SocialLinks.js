@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faMedium, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useTrail, animated } from 'react-spring';
 
-const linkData = [
+const LINKS = [
   {href: "https://twitter.com/Camin_McCluskey", icon: faTwitter, label: "twitter link"},
   {href: "https://medium.com/@caminmccluskey", icon: faMedium, label: "medium link"},
   {href: "https://www.linkedin.com/in/camin-mccluskey", icon: faLinkedin, label: "linkedin link"},
@@ -11,19 +11,20 @@ const linkData = [
 
 
 const SocialLinks = () => {
-  const trail = useTrail(4, {
+  const trail = useTrail(LINKS.length, {
     config: { mass: 10, tension: 1500, friction: 400 },
     from: { opacity: 0 },
-    to: { opacity: 1}
-   }) 
+    to: { opacity: 1},
+    delay: 500,
+  });
 
   return (
     <div className="flex space-x-5 md:space-x-10 justify-center md:pt-1 dark:text-white text-2xl md:text-3xl">
       {trail.map((style, idx) => {
-        const { href, icon, label } = linkData[idx];
+        const { href, icon, label } = LINKS[idx];
         return (
           <animated.div style={style}>
-            <SocialLink href={href} icon={icon} />
+            <SocialLink href={href} icon={icon} label={label} />
           </animated.div>
         )
       })}

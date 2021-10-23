@@ -4,39 +4,39 @@ import helpful_machines from './content/posts/helpful_machines.md';
 
 const data = {
   thoughts: [
-    {
-      id: "helpful-machines",
-      title: "Helpful Machines",
-      subtitle: "Meta learning post",
-      updated: "2021/10/17",
-      tags: ["ML", "Futurism"],
-      content: {
-        type: "local",
-        uri: helpful_machines
-      }
-    },
-    {
-      id: "hw",
-      title: "Hello World",
-      subtitle: "A post about the redesign of this site in React with Tailwind CSS",
-      updated: "2021/10/12",
-      tags: ["Frontend", "React", "Tailwind"],
-      content: {
-        type: "local",
-        uri: EXAMPLE
-      }
-    },
-    {
-      id: "stable",
-      title: "Stable Future",
-      subtitle: "Some thoughts around entropy and predicatibily of the future",
-      updated: "2021/10/12",
-      tags: [],
-      content: {
-        type: "local",
-        uri: EXAMPLE
-      }
-    },
+    // {
+    //   id: "helpful-machines",
+    //   title: "Helpful Machines",
+    //   subtitle: "Meta learning post",
+    //   updated: "2021/10/17",
+    //   tags: ["ML", "Futurism"],
+    //   content: {
+    //     type: "local",
+    //     uri: helpful_machines
+    //   }
+    // },
+    // {
+    //   id: "hw",
+    //   title: "Hello World",
+    //   subtitle: "A post about the redesign of this site in React with Tailwind CSS",
+    //   updated: "2021/10/12",
+    //   tags: ["Frontend", "React", "Tailwind"],
+    //   content: {
+    //     type: "local",
+    //     uri: EXAMPLE
+    //   }
+    // },
+    // {
+    //   id: "stable",
+    //   title: "Stable Future",
+    //   subtitle: "Some thoughts around entropy and predicatibily of the future",
+    //   updated: "2021/10/12",
+    //   tags: [],
+    //   content: {
+    //     type: "local",
+    //     uri: EXAMPLE
+    //   }
+    // },
     {
       id: "cross-account-framework",
       title: "A Framework for Configuring Cross-Account Access in AWS",

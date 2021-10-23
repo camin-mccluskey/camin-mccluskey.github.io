@@ -25,7 +25,7 @@ const ArticleItem = ({id, title, subtitle, updated, tags, content: {type, uri}})
   return (
     <div className="py-3">
       <ArticleMeta updated={updated} tags={tags} />
-      <div className="flex sm:items-start md:items-center">
+      <div className="flex justify-between sm:items-start md:items-center">
         {linkTitle}
         {logo}
       </div>

@@ -5,7 +5,8 @@ const Bio = () => {
   const props = useSpring({
     to: { opacity: 1 },
     from: { opacity: 0 },
-    config: { mass: 10, tension: 1500, friction: 1000 }
+    config: { mass: 10, tension: 1500, friction: 1000 },
+    delay: 250,
   })
 
   return (

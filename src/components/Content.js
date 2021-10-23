@@ -6,7 +6,7 @@ import Resume from '../content/resume/resume.pdf';
 
 
 const Content = ({ data }) => {
-  const [activeSection, setActiveSection] = useState("thoughts");
+  const [activeSection, setActiveSection] = useState("");
   return (
     <>
     <SectionsList activeSection={activeSection} setActiveSection={setActiveSection}/>
