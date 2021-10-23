@@ -106,7 +106,7 @@ const data = {
     {
       id: "uc",
       title: "Ulysses Companion",
-      description: "A companion app for reading Jame Joyce's modern classic.",
+      description: "A companion app for reading James Joyce's modern classic.",
       content: {
        	uri: "https://camin.xyz/ulysses-companion",
 	      badges: ['react', 'tailwind']

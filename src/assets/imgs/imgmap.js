@@ -5,7 +5,7 @@ const imgMap = {
   python: 'python/python-original.svg',
   tensorflow: 'tensorflow/tensorflow-original.svg',
   aws: 'amazonwebservices/amazonwebservices-original.svg',
-  tailwind: 'tailwindcss/tailwindcss-original-wordmark.svg',
+  tailwind: 'tailwindcss/tailwindcss-plain.svg',
   graphql: 'graphql/graphql-plain.svg',
   swift: 'swift/swift-original.svg',
   kotlin: 'kotlin/kotlin-original.svg',
