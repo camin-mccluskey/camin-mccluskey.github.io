@@ -1,4 +1,6 @@
-import { useTrail, animated } from 'react-spring';
+import { animated } from 'react-spring';
+import useDefaultTrail from '../utils/useDefaultTrail';
+
 
 const SECTIONS = [
   "thoughts",
@@ -7,12 +9,7 @@ const SECTIONS = [
 ];
 
 const SectionsList = ({ activeSection, setActiveSection }) => {
-  const trail = useTrail(SECTIONS.length, {
-    config: { mass: 10, tension: 1500, friction: 400 },
-    from: { opacity: 0 },
-    to: { opacity: 1},
-    delay: 1000,
-  });
+  const trail = useDefaultTrail(SECTIONS, 1000);
 
   return (
     <div className="grid grid-cols-3 w-4/5 mx-auto text-center gap-12 dark:text-white md:text-2xl font-mono">

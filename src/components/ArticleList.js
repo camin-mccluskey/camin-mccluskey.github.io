@@ -1,11 +1,19 @@
 import ArticleItem from "./ArticleItem"
+import { animated } from 'react-spring';
+import useDefaultTrail from '../utils/useDefaultTrail';
+
 
 const ArticleList = ({ articles }) => {
+  const trail = useDefaultTrail(articles, 100);
+
   return (
     <div className="w-full grid-cols-1 divide-y divide-black dark:divide-white space-y-7">
-      {articles.map((t, idx) => {
+      {trail.map((style, idx) => {
+        const { id, title, subtitle, updated, tags, content } = articles[idx];
         return (
-          <ArticleItem id={t.id} title={t.title} subtitle={t.subtitle} updated={t.updated} tags={t.tags} content={t.content} key={idx}/>
+          <animated.div style={style}>
+            <ArticleItem id={id} title={title} subtitle={subtitle} updated={updated} tags={tags} content={content} key={idx}/>
+          </animated.div>
         )
       })}
     </div>

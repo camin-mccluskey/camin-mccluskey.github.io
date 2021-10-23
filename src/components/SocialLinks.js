@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faMedium, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { useTrail, animated } from 'react-spring';
+import { animated } from 'react-spring';
+import useDefaultTrail from '../utils/useDefaultTrail';
+
 
 const LINKS = [
   {href: "https://twitter.com/Camin_McCluskey", icon: faTwitter, label: "twitter link"},
@@ -11,12 +13,7 @@ const LINKS = [
 
 
 const SocialLinks = () => {
-  const trail = useTrail(LINKS.length, {
-    config: { mass: 10, tension: 1500, friction: 400 },
-    from: { opacity: 0 },
-    to: { opacity: 1},
-    delay: 500,
-  });
+  const trail = useDefaultTrail(LINKS, 500);
 
   return (
     <div className="flex space-x-5 md:space-x-10 justify-center md:pt-1 dark:text-white text-2xl md:text-3xl">
@@ -35,7 +32,7 @@ const SocialLinks = () => {
 const SocialLink = ({ href, icon, label}) => {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
-        <FontAwesomeIcon icon={icon} className="highlight"/>
+      <FontAwesomeIcon icon={icon} className="highlight"/>
     </a>
   )
 }
