@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Content from '../components/Content';
 import CalendlyEmbed from '../components/CalendlyEmbed';
 import Footer from '../components/Footer';
+import Bio from '../components/Bio';
 
 
 function Home({ darkMode, setDarkMode }) {
@@ -14,14 +15,7 @@ function Home({ darkMode, setDarkMode }) {
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
 
         {/* Bio */}
-        <div className="flex justify-center pt-5 pb-8">
-          <p className="dark:text-white w-4/5 darkTrans font-mono">
-            I'm an entrepreneur currently building something new at <a className="link" target="_blank" rel="noopener noreferrer" href="https://joinef.com">Entrepreneur First</a>. 
-            Before that I was a full stack software engineer at Skyscanner, a data analyst at Amazon and worked at some interesting startups. 
-            I am also the co-founder of an app for housemates - <a className="link" target="_blank" rel="noopener noreferrer" href="https://inhouseapp.io">inHouse</a>. 
-            You can find me on Twitter <a className="link" target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/follow?screen_name=camin_mccluskey">@camin_mccluskey</a>. 
-          </p>
-        </div>
+        <Bio />
 
         {/* Divider */}
         {/* <div className="w-4/5 h-px dark:bg-gray-200 darkTrans bg-gray-800 self-center my-5"/> */}
