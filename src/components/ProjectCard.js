@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => {
         <p className="text-2xl text-center dark:text-white darkTrans font-mono">{title}</p>
         <p className="py-3 text-gray-700 dark:text-gray-400 darkTrans font-thin text-lg">{description}</p>
       </div>
-      <div className="flex justify-evenly items-end space-x-12 space-y-3 flex-wrap dark:text-white">
+      <div className="flex justify-center gap-x-12 gap-y-3 flex-wrap">
         {badges.map((b, idx) => {
           const src = `${imgUrl}${imgMap[b]}`;
           return <img width={35} height={35} src={src} key={idx} alt={`${b} logo`} />

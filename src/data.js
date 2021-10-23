@@ -1,5 +1,4 @@
 import EXAMPLE from './content/posts/example.md';
-import helpful_machines from './content/posts/helpful_machines.md';
 
 
 const data = {
