@@ -9,7 +9,7 @@ function Home({ darkMode, setDarkMode }) {
 
   return (
     <div className="dark:bg-black min-w-screen min-h-screen darkTrans pb-3">
-      <div className="flex flex-col justify-center w-full pt-8 relative">
+      <div className="flex flex-col justify-start w-full min-h-screen pt-8 relative">
         { /* Header */ }
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
 
@@ -31,9 +31,8 @@ function Home({ darkMode, setDarkMode }) {
         
         {/* Calendly Embed */}
         <CalendlyEmbed darkMode={darkMode} />
-
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
