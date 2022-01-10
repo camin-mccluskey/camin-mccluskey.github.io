@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import { useParams } from "react-router";
 import data from '../data';
 import Header from '../components/Header';
@@ -26,13 +27,14 @@ const Article = ({ darkMode, setDarkMode }) => {
   }, [])
   
   return (
-    <div className="flex flex-col dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pt-8 pb-3">
+    <div className="flex flex-col dark:bg-black bg-gray-100 min-w-screen min-h-screen darkTrans pt-8 pb-3 px-5">
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <div className="prose w-full flex-grow max-w-none px-5 py-10 dark:prose-dark">
         <ReactMarkdown 
           remarkPlugins={[[remarkGfm]]}
           children={content.md}
           linkTarget="_blank"
+          rehypePlugins={[rehypeRaw]}
           components={{
             // assuming one title h1 tag - we can add the meta data here
             h1: ({node, ...props}) => <ArticleTitle updated={updated} tags={tags} {...props} />,

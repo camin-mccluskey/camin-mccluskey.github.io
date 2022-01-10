@@ -1,19 +1,20 @@
 import EXAMPLE from './content/posts/example.md';
+import FIVETWO_IN_TWOZEROTWOTWO from './content/posts/52_in_2022.md';
 
 
 const data = {
   thoughts: [
-    // {
-    //   id: "helpful-machines",
-    //   title: "Helpful Machines",
-    //   subtitle: "Meta learning post",
-    //   updated: "2021/10/17",
-    //   tags: ["ML", "Futurism"],
-    //   content: {
-    //     type: "local",
-    //     uri: helpful_machines
-    //   }
-    // },
+    {
+      id: "52-in-2022",
+      title: "52 Books in 2022",
+      subtitle: "Catch up on the summaries and what's next on my reading list for this year.",
+      updated: "2022/01/10",
+      tags: ["Reading", "52in2022", "Writing"],
+      content: {
+        type: "local",
+        uri: FIVETWO_IN_TWOZEROTWOTWO
+      }
+    },
     // {
     //   id: "hw",
     //   title: "Hello World",
