@@ -26,17 +26,17 @@ const data = {
     //     uri: EXAMPLE
     //   }
     // },
-    // {
-    //   id: "stable",
-    //   title: "Stable Future",
-    //   subtitle: "Some thoughts around entropy and predicatibily of the future",
-    //   updated: "2021/10/12",
-    //   tags: [],
-    //   content: {
-    //     type: "local",
-    //     uri: EXAMPLE
-    //   }
-    // },
+    {
+      id: "book-summary-csp",
+      title: "Book Summary | The Cold Start Problem — Andrew Chen",
+      subtitle: "The Cold Start Problem is one of the highest signal/noise business books I’ve had the pleasure of reading in some time. The book answers the question that is top of mind for founders and leaders at platform companies: how do you use network effects to scale your product?",
+      updated: "2022/01/10",
+      tags: ["Reading", "52in2022", "Business", "Startups"],
+      content: {
+        type: "medium",
+        uri: "https://caminmccluskey.medium.com/book-summary-the-cold-start-problem-andrew-chen-25f61f4d66b"
+      }
+    },
     {
       id: "cross-account-framework",
       title: "A Framework for Configuring Cross-Account Access in AWS",
