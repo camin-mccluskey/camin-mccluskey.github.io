@@ -1,12 +1,17 @@
-import React from "react";
-import "./App.scss";
-import useDarkMode from "./utils/useDarkMode";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import React, { useState } from "react";
+import './App.scss';
+import useDarkMode from './utils/useDarkMode';
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Home from "./pages/Home"
 import Article from "./pages/Article";
 
 const App = () => {
   const [darkMode, setDarkMode] = useDarkMode(false);
+  const [something, setSomething] = useState(false);
 
   return (
     <Router>
@@ -19,7 +24,7 @@ const App = () => {
         </Route>
       </Switch>
     </Router>
-  );
-};
+  )
+}
 
 export default App;
