@@ -1,3 +1,6 @@
+> ⚠️ Deprecated: Replaced by [camin.dev](https://github.com/camin-mccluskey/camin.dev)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Default branch is `dev`, built project is deployed to `master` and is deployed to https://camin.xyz
 
